@@ -71,6 +71,7 @@ c.  $P(A' \cap B)$
 d.  $P(A \cap B')$
 e.  $P(A \cup B)'$
 f.  $P(A' \cup B)$
+g.  $P(A'\cap B')$
 
 **Problem 2.1: (W Navidi)** A system contains two components, A and B. The system will function so long as either A or B functions. The probability that A functions is 0.95, the probability that B functions is 0.90, and the probability that both function is 0.88. What is the probability that the system functions?
 
