@@ -181,6 +181,12 @@ a\) What is the probability that a randomly selected Pulsar 32-inch HDTV will ha
 
 b\) If the selected Pulsar 32-inch HDTV is found defective, what is the probability that the component selected was produced by Plant C? (**Ans:** 26.67%)
 
+**Problem 2.9** Suppose 2% of cotton fabric rolls and 3% of nylon fabric rolls contain flaws. Of the rolls used by a manufacturer, 70% are cotton and 30% are nylon.
+
+**(a)** What is the probability that a randomly selected roll used by the manufacturer contains **flaws**?
+
+**(b)** If a randomly selected roll is found to contain a flaw, what is the probability that the roll is **cotton**?
+
 ## Random Variables
 
 A **variable** is said to be **random** if its values are determined by a random experiment. In other word, **random variable** is a numerical description of the outcome of an experiment.
