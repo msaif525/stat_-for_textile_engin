@@ -1,0 +1,542 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistics For Textile Engineering",
+    "section": "",
+    "text": "Preface\nThis eBook is developed for the students of bachelor students of Texttile Engineering.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "1_intro.html",
+    "href": "1_intro.html",
+    "title": "1  Introduction to Statistics",
+    "section": "",
+    "text": "1.1 Types of Data\nThe field of statistics deals with the collection, presentation, analysis, and use of data to make decisions, solve problems, and design products and processes. In simple terms, statistics is the science of data.\nBecause many aspects of engineering practice involve working with data, obviously knowledge of statistics is just as important to an engineer as are the other engineering sciences.\nSpecifically, statistical techniques can be powerful aids in designing new products and systems, improving existing designs, and designing, developing, and improving production processes.\nStatistical methods are used to help us describe and understand variability. By variability, we mean that successive observations of a system or phenomenon do not produce the same result. We all encounter variability in our everyday lives, and statistical thinking can give us a useful way to incorporate this variability into our decision-making processes (Montgomery and Runger 2014).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "1_intro.html#types-of-data",
+    "href": "1_intro.html#types-of-data",
+    "title": "1  Introduction to Statistics",
+    "section": "",
+    "text": "Quantitative: Data that represents numerical values.\nExample: Heights of people, temperatures, test scores.\nSubtypes:\n\nDiscrete Data: Countable values (e.g., number of students in a class).\nContinuous Data: Measurable values that can take any value within a range (e.g., weight, time).\n\nCategorical: Data that represents categories or labels.\nExample: Colors of cars, types of animals, survey responses (e.g., yes/no).\nSubtypes:\n\nNominal Data: Categories without a natural order (e.g., gender, blood type).\nOrdinal Data: Categories with a meaningful order (e.g., rankings, education levels).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "1_intro.html#source-of-data",
+    "href": "1_intro.html#source-of-data",
+    "title": "1  Introduction to Statistics",
+    "section": "1.2 Source of data",
+    "text": "1.2 Source of data\nWhen the data are all of the observations in the population. This results in a census. However, in the engineering environment, the data are almost always a sample that has been selected from the population. Three basic methods of collecting data are\n(i) A retrospective study using historical data (ii) An observational study (iii)A designed experiment\nAn effective data-collection procedure can greatly simplify the analysis and lead to improved understanding of the population or process that is being studied. We now consider some examples of these data-collection methods. (For detail, see Montgomery and Runger (2014) , Chapter 1)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "1_intro.html#population-and-sample",
+    "href": "1_intro.html#population-and-sample",
+    "title": "1  Introduction to Statistics",
+    "section": "1.3 Population and Sample",
+    "text": "1.3 Population and Sample\n\nPopulation: A population is the entire collection of elements or outcomes about which information is required.\n\nThe total number of elements in the population is called the population size, denoted by \\(N\\).\n\nSample: A sample is a subset of a population, comprising the elements or outcomes that are actually observed. A good sample must be representative of its population.\n\nThe number of elements in the sample is called the sample size, denoted by \\(n\\).\n\nA numerical summary of a sample is called a statistic.\nA numerical summary of a population is called a parameter.\nStatistics are often used to estimate parameters.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "1_intro.html#random-sample",
+    "href": "1_intro.html#random-sample",
+    "title": "1  Introduction to Statistics",
+    "section": "1.4 Random Sample",
+    "text": "1.4 Random Sample\nA simple random sample of size \\(n\\) is a sample chosen by a method in which each collection of \\(n\\) elements selected from population is equally likely to contain the sample, just as in a lottery.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "1_intro.html#branch-of-statistics-descriptive-and-inferential-statistics",
+    "href": "1_intro.html#branch-of-statistics-descriptive-and-inferential-statistics",
+    "title": "1  Introduction to Statistics",
+    "section": "1.5 Branch of Statistics: Descriptive and Inferential Statistics",
+    "text": "1.5 Branch of Statistics: Descriptive and Inferential Statistics\nThe study of statistics is divided into two parts- Descriptive statistics and Inferential statistics.\nDescriptive statistics is the branch of statistics that involves the organization, summarization, and display of data.\n\nInferential statistics is the branch of statistics that involves using a sample to draw conclusions about a population.\nA basic tool in the study of inferential statistics is probability and probability distributions.\nThe goal of inferential statistics is to draw conclusions from a sample and generalize them to the population. The most common methodologies used are hypothesis tests, Analysis of variance, etc.\n\nWe will begin with descriptive statistics.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "1_intro.html#descriptive-statistics",
+    "href": "1_intro.html#descriptive-statistics",
+    "title": "1  Introduction to Statistics",
+    "section": "1.6 Descriptive Statistics",
+    "text": "1.6 Descriptive Statistics\n\n1.6.1 Measures of Central Tendency\nCentral tendency refers to a most typical or most representative or central value of a data set. It summarize a data numerically with a single measure. The most common measures of central tendency are the mean( arithmetic average), median and mode.\n\n1.6.1.1 The mean\nConsider a sample data of size \\(n\\) of variable \\(X\\) with observations \\(x_1,x_2,...,x_n\\). Then the mean/ sample mean of \\(X\\) is:\n\\[\\bar X=\\frac{x_1+x_2+...+x_n}{n}=\\frac{\\sum x}{n} \\tag{1.1}\\]\nOn the other hand if we have population data of size \\(N\\) then the population mean of \\(X\\) is:\n\\[\\mu =\\frac{\\sum_{i=1}^N x_i }{N} \\tag{1.2}\\]\nExample:\nNote:\n\nSum of the deviation form mean is zero that is \\(\\sum_{i=1}^n (x_i-\\bar x)=0\\).\nFor any real number \\(a \\ne \\bar x\\), \\(\\sum_{i=1}^n(x_i-\\bar x)^2&lt; \\sum_{i=1}^n(x_i-a)^2\\).\nMean is affected by outlier/extreme value.\n\n\n\n1.6.1.2 The median\n\n\n1.6.1.3 The mode\n\n\n\n1.6.2 The quantiles (Percentiles, quartiles, deciles)\nThe quantiiles are cut points which divide a data set into particular equal portions. For example:\n\nPercentiles divides the data into approximately 100 equal parts.\nQuartiles divides the data into approximately 4 equal parts.\nDeciles divides the data into approximately 10 equal parts.\n\nQuartiles and Deciles are special case of Percentiles.\nFormula to compute Percentiles\nThe \\(j^{th}\\) percentile is computed as follows:\n\\[P_j=\\left ( \\frac{n+1}{100}*j \\right)^{th} value \\ \\ ; \\ \\ j=1,2,...,99 \\tag{1.3}\\]\nNote that\n\nFirst/lower quartile, \\(Q_1=P_{25}\\).\nSecond quartile/median, \\(Q_2=P_{50}\\).\nThird/upper quartile, \\(Q_3=P_{75}\\).\n\nProblem Compute the 25th and 60th percentile from the following data:\nCPU time of 9 jobs (in seconds): 59, 46, 37, 42, 30, 55, 56, 36, and 82.\nSolution: Here, \\(n=9\\).\nSorted data: 30, 36, 37, 42, 46, 55, 56, 59, and 82.\nSo, \\(P_{25}=(25*\\frac{9+1}{100})^{th} \\ \\ value=2.5^{th} \\ \\ value\\)\n\\(=2^{nd} \\ \\ value +0.5(3^{rd}-2^{nd})=36+0.5(37-36)=36.5\\).\nInterpretation: \\(P_{25}=36.5\\) implies that approximately 25% of the total observations lie below or equal to 36.5.\nSimilarly, \\(P_{60}=(60*\\frac{9+1}{100})^{th}\\ \\ value=6^{th}\\ \\ value=55\\).\nInterpretation: \\(P_{60}=55\\) implies that approximately 60% of the total observations lie below or equal to 55.\nProblem : Here is the monthly starting salary ($) of 12 graduates:\n3450, 3550, 3650, 3480, 3355, 3310, 3490, 3730, 3540, 3925, 3520, 3480\nCompute Q1 and Q3 of the above data (Will be solved in class).\n\n\n1.6.3 Measures of Variation\nVariability in data means lack of uniformity. It is also referred to as spread, scatter, or dispersion. We turn now to a discussion of some commonly used measures of variability.\n\n1.6.3.1 Range\nRange, \\(R=Maximum \\ \\ value- Minimum \\ \\ value\\)\n\nHeavily influenced by extreme values\n\n\n\n1.6.3.2 Inter-quartile-range\nInter-quartile-range, \\(IQR=Q_3-Q_1\\)\n\nIt exhibits the variability in the middle 50% of the observations.\nThe interquartile range is less sensitive to the extreme values in the sample than is the ordinary sample range.\n\n\n\n1.6.3.3 Variance and Standard deviation\n\nSample variance (denoted by English Letter \\(s^2\\)),\n\\[s^2=\\frac{(x_1-\\bar x)^2+(x_2-\\bar x)^2+...+(x_n-\\bar x)^2}{n-1}=\\frac{\\sum(x_i-\\bar x)^2}{n-1}\\]\n\\[\\therefore\\ \\  s^2 =\\frac{\\sum x_i^2-n(\\bar x)^2}{n-1} \\tag{1.4}\\]\nand Sample SD,\n\\[s=\\sqrt {s^2}\\]\nPopulation variance (denoted by Greek Letter \\(\\sigma ^2\\)),\n\n\\[\\sigma^2=\\frac{(x_1-\\mu)^2+(x_2-\\mu)^2+...+(x_N-\\mu)^2}{N}=\\frac{\\sum(x_i-\\mu)^2}{N}=\\frac{\\sum x_i^2-N(\\mu)^2}{N}\\]\n\\[\\therefore \\ \\ \\sigma^2=\\frac{\\sum x^2}{N}-\\mu^2 \\tag{1.5}\\]\nand Population SD is\n\\[\\sigma =\\sqrt {\\sigma^2}\\]\nNote: In modern statistics and quality management, consistency is the hallmark of quality. While the Mean tells you if you are hitting your target, the Variation (Standard Deviation) tells you how reliable you are. High variation is often referred to as the “enemy” of quality because it creates unpredictability.\nProblem : Ten-count tests made on certain yarn have shown following results.\n22.8, 23.2, 22.9, 22.6, 23.4, 23.0, 23.1, 23.0, 22.9, 23.0\nCompute sample mean, sample variance and sample standard deviation.\nSolution: Suppose \\(X\\) be the count test.\nHere, \\(n=10\\); \\(\\sum x =229.9\\) ,\n\\(\\sum x^2=x_1^2+x_2^2+...+x_n^2=22.8^2+23.2^2+...+23.0^2=5285.83\\)\nSo, the sample mean \\(\\bar x=\\frac{\\sum x}{n}=\\frac{229.9}{10}=22.99\\) .\nSample variance, \\(s^2=\\frac{\\sum x^2-n\\cdot (\\bar x ^2)}{n-1}=\\frac{5285.83-10\\cdot (22.99^2)}{10-1}=0.04766667\\) and\nSample SD, \\(s=\\sqrt  {s^2}=\\sqrt {0.04766667}=0.218327\\approx0.2183\\).\n\n\n1.6.3.4 Coefficient of variation\n\\[CV=\\frac{SD}{Mean} \\tag{1.6}\\]\n\nCV is unit free.\nA lower CV indicates that the variation is small compared to the size of the mean, which refers greater consistency or reliability.\nIn general industry Standards for “Good Consistency”, CV should be less than 10% and \\(CV\\ge 30\\%\\) indicates “Poor consistency” (Belle 2002) .\n\nProblem: Compute coefficient of variation of yarn-count data mentioned in Problem…..\nProblem Five strength tests each carried out on the two fabrics have shown following results:\nA: 15.2, 15.5, 15.0, 15.4, 15.6\nB: 15.0, 14.8, 13.6, 15.5, 15.2\nFind CV% for both and decide which fabric is more consistent.\nSolution:\nProblem Following data represents number of end breaks recorded on two ring frames at ten occasions.\nR/F-I: 12, 10, 8, 15, 9, 11, 14, 15, 8, 10\nR/F-II: 10, 11, 12, 9, 12, 9, 11, 12, 11, 10\nFind which ring frame is more consistent in terms of end breaks.\nSolution:\n\n\n\n\n\n\nNoteExercise 1.1\n\n\n\n1) An article describes an experiment to test the yield strength of circular tubes with caps welded to the ends. The first 8 yields (in kN) are: 104, 108, 126,126, 128, 128, 140, 156\nCompute the sample mean, the standard deviation, and the coefficient of variation of the yield strength.\n2) The “cold start ignition time” of an automobile engine is being investigated by a gasoline manufacturer. The following times (in seconds) were obtained for a test vehicle: 1.75, 1.92, 2.62, 2.35, 3.09, 3.15, 2.53, 1.91.\nCalculate the sample mean, sample standard deviation and coefficient of variation of cold start ignition time.\n3) The monthly starting salary ($) of 12 graduates are as follows:\n3450 ,3550 ,3650 ,3480 ,3355, 3310 ,3490 ,3730, 3540 ,3925, 3520 ,3480\n\nCompute mean, median, lower and upper quartiles of salary data. Also compute IQR and standard deviation\nTo be in top 15% earners what should be the starting salary of a graduate?\n\n4) The lengths of power failures, in minutes, are recorded as follows: 18, 15, 90, 78, 69, 98, 102, 83, 55, 28.\n\nCompute sample mean and standard deviation.\n\nCompute sample median and IQR.\n\nTo be in the bottom 10% of power failures in your residence then what should be the cutoff value of power failure lengths?\n\n5) Following are the results of count tests made on the production of two shifts:\nShift I: 11.7, 12.2, 12.0, 11.6, 10.9, 13.0, 11.0, 12.8, 11.5, 12.0\nShift II: 12.2, 11.6, 12.0, 12.1, 12.0, 12.3, 11.8, 11.6, 11.8, 12.0\nUsing CV% decide which production is more consistent.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "1_intro.html#data-visualization",
+    "href": "1_intro.html#data-visualization",
+    "title": "1  Introduction to Statistics",
+    "section": "1.7 Data visualization",
+    "text": "1.7 Data visualization\nBefore diving into advanced analysis we should have a look at the data. Because ” A picture is worth a thousand words”. Often a summary of a collection of data via a graphical display can provide insight regarding the system from which the data were taken.\n\n1.7.1 Data viz. for Qualitative/categorical data\n\nBar-chart- used to visualise frequency of each label of categorical variable with 2D bar.\nPie-chart- used to visualise frequency/ percentage of each label of categorical variable in a circle.\nStacked/Clustered Bar chart- used to show the relation between two categorical variables in side-by-side column/ stacked-column.\n\nFor detail, visit Summarizing Categorical Data.\n\n\n1.7.2 Data viz. for Quantitative data:\n\nHistogram\nBoxplot\nScatter plot\n\n\n1.7.2.1 Histogram\nThe histogram is a visual display of the frequency distribution. The histogram provides a visual impression of the shape of the distribution of the measurements and information about the central tendency and scatter or dispersion in the data.\nTo construct a frequency distribution, we must divide the range of the data into intervals, which are usually called class intervals, cells, or bins (number of classes ) , and count how many observations fall into each bin.\n\nA frequency histogram consists of columns, one for each bin, whose height is determined by the number of observations in the bin. [Frequency distribution]\nA relative frequency histogram has the same shape but a different vertical scale. Its column heights represent the proportion of all data that appeared in each bin. [Relative frequency distribution]\n\nExample 1.10: The following data are the joint temperatures of the O-rings (°F) for each test firing or actual launch of the space shuttle rocket motor (from Presidential Commission on the Space Shuttle Challenger Accident, Vol. 1, pp. 129–131):\n\n67, 40, 58, 76, 58, 70, 72, 67, 75, 70, 57, 83, 53, 45, 70, 81, 78, 76, 67, 73, 61, 52, 31, 67, 79, 75, 69, 84, 68, 80\n\nTo construct frequency distribution and others follow the steps:\nStep-1: Find the number bins, \\(k=\\sqrt n=\\sqrt 30=5.48\\approx 6\\) (round to nearest integer).\nStep-2: Find the range of the data, \\(R=Maximum-Minimum=84-31=53\\)\nStep-3: Determine bin width, \\(w=\\frac{R}{k}=\\frac{53}{6}=8.83 \\approx 10\\)\nStep-4: Define the bins in exclusive method, starting from a suitable data value close to lowest value, for example [30, 40), [40, 50), and so on until we have the highest data value.\nStep-5: Now count the observation fall in each bin, using tally.\n\nFrequency, Relative frequency, Cumulative frequency Distribution for the O-rings temperature data (n=30)\n\n\n\n\n\n\n\n\n\nTemperatures\n(in o F)\nTally\nFrequency (f)\nRelative frequency (rf)\nCumulative frequency (cf)\n\n\n\n\n[30,40)\n|\n1\n0.03\n1\n\n\n[40,50)\n||\n2\n0.07\n3\n\n\n[50,60)\n||||\n5\n0.17\n8\n\n\n[60,70)\n|||| ||\n7\n0.23\n15\n\n\n[70,80)\n|||| |||| |\n11\n0.37\n26\n\n\n[80,90)\n||||\n4\n0.13\n30\n\n\nTotal\n\nn=30\n1.00\n\n\n\n\nThe histogram from the previous example is shown in Figure 1.1:\n\n\n\n\n\n\n\n\nFigure 1.1: Frequency histogram of temperature (°F)\n\n\n\n\n\nHistogram and shape of the distribution\nDeparture from symmetry is often referred as skewness. When the sample size is large, the histogram can provide a reasonably reliable indicator of the general shape of the distribution or population of measurements from which the sample was drawn. Here are some typical examples of skewness.\n\n\n\n\n\n\n\n\nFigure 1.2: Histograms Showing Differing Levels of Skewness\n\n\n\n\n\nNOTE: A symmetric histogram often represents a stable, predictable process where data clusters evenly around the mean, indicating that variation is likely due to common causes rather than specific errors.\n\n\n1.7.2.2 Box-plot\nThe box plot is a graphical presentation that simultaneously describes several important features of a data set, such as center, spread, departure from symmetry, and identification of unusual observations or outliers.\nTo construct a box-plot we have\n\nto sort data (smallest to largest\nto compute \\(Q_1, Q_2,Q_3, IQR\\)\nto determine the lower fence, \\(lf=Q_1-1.5(IQR)\\)\nto determine the upper fence, \\(uf=Q_3+1.5(IQR)\\)\n\nThen we draw a diagram like the following which is called a box plot (Montgomery and Runger 2014, 239).\n\n\n\n\n\n\nFigure 1.3: Description of a box plot\n\n\n\nIllustration with an example\nThe data provides a the fuel consumption in Gallons per Kilometer (GpK) for a group of 17 medium-sized mobile home units.\n30, 34, 34, 34, 34, 35, 35, 35, 35, 35, 35, 37, 37, 38, 40, 42, 42\n(a) Construct a box-plot.\n(b) Comment about shape of the data (departure from symmetry)\n(c) Show outlier (if any).\nSolution:\n\n\n\n\n\n\n\n\nFigure 1.4: Box-plot of fuel consumption (in GpK)\n\n\n\n\n\n(b) Approximately symmetric.\n(c) There is an outlier in the upper tail (42).\nParallel/comparative box-plot\nBox plots are very useful in graphical comparisons among data sets because they have high visual impact and are easy to understand.\n\nExample: Two catalysts are being analyzed to determine how they affect the mean yield of a chemical process. Specifically, catalyst 1 is currently used; but catalyst 2 is acceptable. Because catalyst 2 is cheaper, it should be adopted, if it does not change the process yield. A test is run in the pilot plant and results in the data shown below (Montgomery and Runger 2014, 384).\n\nPerformance Values for Catalyst 1 and Catalyst 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservation Number\n1\n2\n3\n4\n5\n6\n7\n8\n\n\n\n\nCatalyst 1\n91.50\n94.18\n92.18\n95.39\n91.79\n89.07\n94.72\n89.21\n\n\nCatalyst 2\n89.19\n90.95\n90.46\n93.21\n97.19\n97.04\n91.07\n92.75\n\n\n\nFigure 1.5 presents a comparative box plot of the data from the two samples.\n\n\n\n\n\n\n\n\nFigure 1.5: Comparison of Catalyst Performance: Catalyst 1 vs. Catalyst 2\n\n\n\n\n\nThough the median yields are same for both catalysts but Catalyst 2 produces higher variability in yield. However overall maximum yield is obtained from Catalyst 2. So based on this visual inspection we can use Catalyst 2 (it is also cheaper!).\nNOTE: To know more about box-plot please visit Minitab® Support.\n\n\n\n\n\n\nNoteExercise 1.2\n\n\n\n1) The following sample data presents the thickness (Å) of a metal layer on 20 silicon wafers resulting from a chemical vapor deposition (CVD) process. Scientists believe that the thickness is usually normally distributed having a bell-shaped distribution for a smooth process. Construct a frequency histogram of metal thickness data. Conclude whether the process is smooth or not.\n\n468, 459, 450, 453, 473, 454, 458, 438, 447, 463,\n445, 466, 456, 434, 471, 437, 459, 445, 454, 423\n\n2) The shear strengths of 20 spot welds in a titanium alloy are as follows:\n\n5408 5431 5475 5442 5376 5388 5459 5422 5416 5435\n5420 5429 5401 5446 5487 5416 5382 5357 5388 5457\n\nConstruct a frequency histogram of shear strength data. Conclude whether the shear strength is approximately symmetric or not.\n3) The data provides the fuel consumption for a group of 17 medium-sized mobile home units.\n30, 34, 34, 34, 34, 35, 35, 35, 35, 35, 35, 37, 37, 38, 40, 42, 42.\n\nConstruct a boxplot and show outlier(s) if any. Does the plot appear to be symmetric?\nFind the 90th percentile. Is it an outlier?\n\n4) The cylindrical compressive strength (in MPa) was measured for 11 beams. The results were:\n\n38.43, 38.43, 38.39, 38.83, 38.45, 38.35, 38.43, 38.31, 38.32, 38.48, 38.50.\n\n\nCompute 1st quartile, 3rd quartile and IQR.\nCheck for outlier (s).\nConstruct a box-plot, show the outliers and comment about the symmetry of the distribution.\n\n5) An article describes an experiment to test the yield strength of circular tubes with caps welded to the ends. The first 18 yields (in kN) are:\n\n96, 96, 102, 102, 102, 104, 104, 108, 126,126, 128, 128, 140, 156, 160, 160, 164,170.\n\nConstruct a simple box-plot of yield strength. Find the value above which top 10% yield strength lie.\n6) The data are diameters (in mm) of holes in a group of 12 wing leading edge ribs for a commercial transport airplane:\n120.1, 120.2, 120.3, 120.4, 120.5, 120.5, 120.7, 120.8, 120.9, 120.9, 121.3, 121.1\nConstruct a box-plot and show outlier(s) if any. Comment about departure from symmetry of diameter of holes data.\n7) The Number of Breaks in Yarn during Weaving (Tippett 1950)\nThis data set gives the number of warp breaks per loom, where a loom corresponds to a fixed length of yarn.\nFormat\nA data frame with 54 observations on 3 variables.\n\n\n\nbreaks\nnumeric\nThe number of breaks\n\n\nwool\nfactor\nThe type of wool (A or B)\n\n\ntension\nfactor\nThe level of tension (L, M, H)\n\n\n\nThere are measurements on 9 looms for each of the six types of warp (AL, AM, AH, BL, BM, BH).\n\n\n\n\n\n\n\n\n\na) Describe which wool is better.\nb) Describe which tension is better.\n\n\n\n\n\n\nBelle, Gerald van. 2002. Statistical Rules of Thumb. 1st ed. New York: Wiley-Interscience.\n\n\nMontgomery, Douglas C., and George C. Runger. 2014. Applied Statistics and Probability for Engineers. Sixth edition. Hoboken, NJ: John Wiley; Sons, Inc.\n\n\nTippett, L. H. C. 1950. Technological Applications of Statistics. New York: Wiley.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "2_probablity.html",
+    "href": "2_probablity.html",
+    "title": "2  Probability and Random Variables",
+    "section": "",
+    "text": "2.1 Basic elements of probability\nOur life is full of uncertainty. To take valid decision in the face of uncertainty we have to study probability. For examples we often think of the following phenomenon:\nMathematically, \\[A_i \\cap A_j = \\emptyset \\quad \\text{for } i \\neq j\\]\n\\[E_1\\cup E_2\\cup E_3=\\Omega \\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Probability and Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "2_probablity.html#basic-elements-of-probability",
+    "href": "2_probablity.html#basic-elements-of-probability",
+    "title": "2  Probability and Random Variables",
+    "section": "",
+    "text": "Random experiment: Which has 2 or more outcomes and cannot be predicted with certainty. Example: Tossing a coin, rolling a dice, testing the strength of fibers etc.\nSample space: The set of all possible outcomes of a random experiment, often denoted by Greek uppercase letter Omega (\\(\\Omega\\)). Example The sample space of rolling a six-sided dice is: \\(\\Omega =\\{1,2,3,4,5,6 \\}\\).\nEvent: An event (\\(A\\)) is a subset of the sample space \\((A\\subseteq \\Omega)\\).\nComplement event: The complement of an event \\(A\\) consists of all the outcomes in the sample space \\(\\Omega\\) that are not in \\(A\\), often denoted by \\(A^c, A^{'}\\) or \\(\\bar A\\). In set theory, \\(A^{'}=\\Omega-A\\).\nMutually exclusive/disjoint events: A sequence of events \\(A_1, A_2, A_3,...\\) are said to be mutually exclusive events if they cannot happen together.\n\n\n\nMutually exhaustive events: In probability, a set of events is called collectively exhaustive if their union covers the entire sample space. In other words, at least one of these events must happen whenever the experiment is performed. If \\(E_1, E_2, E_3, \\dots, E_n\\) are events in a sample space \\(\\Omega\\), they are exhaustive if:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Probability and Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "2_probablity.html#probability-measure",
+    "href": "2_probablity.html#probability-measure",
+    "title": "2  Probability and Random Variables",
+    "section": "2.2 Probability Measure",
+    "text": "2.2 Probability Measure\nA probability measure\\((P)\\) is a function that assigns a probability to each event defined in \\(\\Omega\\) satisfies the following axioms:\n\n\\(0\\le P(A)\\le1\\)\nFor any countable sequence of disjoint events \\(A_1, A_2, A_3,...\\),\n\n\\[P(A_1\\cup A_2 \\cup A_3\\cup ...)=P(A_1)+P(A_2)+P(A_3)+...\\]\n\n\\(P(\\Omega)=1\\)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Probability and Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "2_probablity.html#discrete-uniform-law-of-probability",
+    "href": "2_probablity.html#discrete-uniform-law-of-probability",
+    "title": "2  Probability and Random Variables",
+    "section": "2.3 Discrete Uniform law of probability",
+    "text": "2.3 Discrete Uniform law of probability\nIf an experiment can result in any one of \\(N\\) different equally likely outcomes, and if exactly \\(n\\) of these outcomes correspond to event \\(A\\), then the probability of event \\(A\\) is\n\\[P(A)=\\frac{n}{N}\\]\nFor example, if a box contain 5 defective and 15 non-defective items, then in a random draw the probability of selecting a defective item (\\(D\\)) is\n\\[P(D)=\\frac{5}{20}=0.25\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Probability and Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "2_probablity.html#rules-of-probablity-two-events",
+    "href": "2_probablity.html#rules-of-probablity-two-events",
+    "title": "2  Probability and Random Variables",
+    "section": "2.4 Rules of Probablity (Two events)",
+    "text": "2.4 Rules of Probablity (Two events)\n\n\n\n\n\n\n\n\nEvent\nRule\nExplanation\n\n\n\n\n\\(A'\\)\n\\(P(A')=1-P(A)\\)\n\\(A\\) does NOT happen(Complement rule)\n\n\n\\(A\\cap B'\\)\n\\(P(A\\cap B')=P(A)-P(A\\cap B)\\)\nOnly \\(A\\) happens/ \\(A\\) happens BUT NOT \\(B\\) /Eaxctly \\(A\\) happens\n\n\n\\(A\\cup B\\)\n\\(P(A\\cup B)=P(A)+P(B)-P(A\\cap B)\\)\nEither \\(A\\) or \\(B\\) or both/ at least one\n\n\n\\(A'\\cap B'\\)\n\\(P(A'\\cap B')=P(A\\cup B)'\\)\n\\(=1-P(A\\cup B)\\)\nNeither \\(A\\) nor \\(B\\) happens\n\n\n\nExample: (DC Mont.) If \\(P(A) = 0.3\\), \\(P(B) = 0.2\\), and \\(P(A \\cap B) = 0.1\\), determine the following probabilities:\n\n\\(P(A')\\)\n\\(P(A \\cup B)\\)\n\\(P(A' \\cap B)\\)\n\\(P(A \\cap B')\\)\n\\(P(A \\cup B)'\\)\n\\(P(A' \\cup B)\\)\n\\(P(A'\\cap B')\\)\n\nProblem 2.1: (W Navidi) A system contains two components, A and B. The system will function so long as either A or B functions. The probability that A functions is 0.95, the probability that B functions is 0.90, and the probability that both function is 0.88. What is the probability that the system functions?\nProblem 2.2: (W Navidi) Let S be the event that a randomly selected college student has taken a statistics course, and let C be the event that the same student has taken a chemistry course. Suppose P(S) = 0.4, P(C) = 0.3, and \\(P(S \\cap C) = 0.2\\).\n\nFind the probability that a student has taken statistics, chemistry, or both.\nFind the probability that a student has taken neither statistics nor chemistry.\nFind the probability that a student has taken statistics but not chemistry.\n\nProblem 2.3: (W Navidi) Let V be the event that a computer contains a virus, and let W be the event that a computer contains a worm. Suppose \\(P(V) = 0.15\\), \\(P(W) = 0.05\\), and \\(P(V \\cup W) = 0.17\\).\n\nFind the probability that the computer contains both a virus and a worm.\nFind the probability that the computer contains neither a virus nor a worm.\nFind the probability that the computer contains a virus but not a worm.\n\nProblem 2.4: (W Navidi) Inspector A visually inspected 1000 ceramic bowls for surface flaws and found flaws in 37 of them. Inspector B inspected the same bowls and found flaws in 43 of them. A total of 948 bowls were found to be flawless by both inspectors. One of the 1000 bowls is selected at random.\n\nFind the probability that a flaw was found in this bowl by at least one of the two inspectors.\nFind the probability that flaws were found in this bowl by both inspectors.\nFind the probability that a flaw was found by inspector A but not by inspector B.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Probability and Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "2_probablity.html#conditional-probability-multiplication-rule-and-independence",
+    "href": "2_probablity.html#conditional-probability-multiplication-rule-and-independence",
+    "title": "2  Probability and Random Variables",
+    "section": "2.5 Conditional Probability, Multiplication rule and Independence",
+    "text": "2.5 Conditional Probability, Multiplication rule and Independence\nIf \\(A\\) is a prior event (happens first) and \\(B\\) is another event happens after \\(A\\) then the conditional probability of \\(B\\) given \\(A\\) is defined as:\n\\[P(B|A)=\\frac{P(A\\cap B)}{P(A)}\\ \\ ;\\ \\  P(B)&gt;0\\]\nIt implies that,\n\\[P(A\\cap B)=P(A)\\cdot P(B|A) \\ \\ \\ \\ \\mathrm {[\\textbf{Multiplication rule}]}\\]\nNote: Use of these rules depends on the situation (on given information).\nProblem 2.5(Walpole) The probability that an automobile being filled with gasoline also needs an oil change is 0.25; the probability that it needs a new oil filter is 0.40; and the probability that both the oil and the filter need changing is 0.14.\n\nIf the oil has to be changed, what is the probability that a new oil filter is needed?\nIf a new oil filter is needed, what is the probability that the oil has to be changed?\n\n\n\n\n\n\n\nNoteIndependence\n\n\n\nIf \\(A_1\\) and \\(A_2\\) are independent then,\n\\[P(A_1\\cap A_2)=P(A_1)\\cdot P(A_2)\\]\nFor multiple independent events say \\(A_1,A_2,...,A_k\\),\n\\[P(A_1\\cap A_2\\cap...\\cap A_k)=P(A_1)\\cdot P(A_2)\\cdot \\cdot \\cdot P(A_k) \\]\nCorrolary: If \\(A_1\\) and \\(A_2\\) are independent then,\n\\[P(A_1'\\cap A_2')=P(A_1')\\cdot P(A_2')\\]\nProblem 2.6(DC Mont.): The probability that a lab specimen contains high levels of contamination is 0.10. Three samples are checked, and the samples are independent.\n\nWhat is the probability that none contain high levels of contamination?\nWhat is the probability that exactly one contains high levels of contamination?\nWhat is the probability that at least one contains high levels of contamination?\n\nProblem 2.7(Walpole) : A town has two fire engines operating independently. The probability that a specific engine is available when needed is 0.96.\n\nWhat is the probability that neither is available when needed?\nWhat is the probability that a fire engine is available when needed?",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Probability and Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "2_probablity.html#probability-tree-total-probability-rule-and-bayes-rule",
+    "href": "2_probablity.html#probability-tree-total-probability-rule-and-bayes-rule",
+    "title": "2  Probability and Random Variables",
+    "section": "2.6 Probability Tree, Total Probability Rule and Bayes’ Rule",
+    "text": "2.6 Probability Tree, Total Probability Rule and Bayes’ Rule\nGiven,\n\n\n\nPrior probability\nConditional probability\n\n\n\n\nP(A)=0.5\nP(D|A)=0.01\n\n\nP(B)=0.3\nP(D|B)=0.02\n\n\nP(C)=0.2\nP(D|C)=0.02\n\n\n\nThese probabilities can be presented in following tree diagram:\n\nTotal probability rule:\n\\(P(D)=P(D\\cap A)+P(D\\cap B)+P(D\\cap C)\\)\nOr, \\(P(D)=P(A)\\cdot P(D|A)+P(B)\\cdot P(D|B)+P(C)\\cdot P(D|C)\\)\nOr, \\(P(D)=(0.5)(0.01)+(0.3)(0.02)+(0.2)(0.02)=0.015\\)\nWe can also compute \\(P(A|D)\\) as follows:\n\\[P(A|D)=\\frac{P(A\\cap D}{P(D)}=\\frac{(0.5)(0.01)}{0.015}=0.3333\\approx 33.33\\%\\]\nThis is known as Bayes’ Theorem or rule\nProblem 2.8: The panels for the Pulsar 32-inch widescreen LCD HDTVs are manufactured in three locations and then shipped to the main plant of Vista Vision for final assembly. Plants A, B, and C supply 50%, 30%, and 20%, respectively, of the panels used by the company. The quality-control department of the company has determined that 1% of the panels produced by plant A are defective, whereas 2% of the panels produced by plants B and C are defective.\na) What is the probability that a randomly selected Pulsar 32-inch HDTV will have a defective panel? (Ans: 0.015)\nb) If the selected Pulsar 32-inch HDTV is found defective, what is the probability that the component selected was produced by Plant C? (Ans: 26.67%)\nProblem 2.9 Suppose 2% of cotton fabric rolls and 3% of nylon fabric rolls contain flaws. Of the rolls used by a manufacturer, 70% are cotton and 30% are nylon.\n(a) What is the probability that a randomly selected roll used by the manufacturer contains flaws?\n(b) If a randomly selected roll is found to contain a flaw, what is the probability that the roll is cotton?",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Probability and Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "2_probablity.html#random-variables",
+    "href": "2_probablity.html#random-variables",
+    "title": "2  Probability and Random Variables",
+    "section": "2.7 Random Variables",
+    "text": "2.7 Random Variables\nA variable is said to be random if its values are determined by a random experiment. In other word, random variable is a numerical description of the outcome of an experiment.\n\nA random variable often denoted with an uppercase letter (say \\(X\\))\nThe value of a random variable is denoted with a lowercase letter (say \\(x\\))\n\nIllustration Consider a random experiment of tossing a coin (fair/unfair) 2 times. Then the sample space is\n\\[S=\\{ HH,HT,TH,TT \\}\\]\nNow let, \\(X= number\\ \\  of\\ \\  heads \\ \\ occur\\)\nFrom the sample space we can see that \\(X\\) can take following values:\n\n\n\nSample point\n\\(x\\)\n\n\n\\(HH\\)\n2\n\n\n\\(HT\\)\n1\n\n\n\\(TH\\)\n1\n\n\n\\(TT\\)\n0\n\n\n\nSince the values of \\(X\\) completely determined by the outcomes of the random experiment, so \\(X\\) is a random variable (discrete).\n\n2.7.1 Types of random variable\nThere are two types of random variables, discrete and continuous.\nA discrete random variable can assume only a certain number of separated values. A discrete random variable is usually the result of counting something. For example, number of customers arrive, number of calls receive etc.\nA continuous random variable is one whose values are uncountable or which can take any value in a given interval. Generally a continuous random variable is usually the result of measuring something.\nTask Which of these variables are discrete and which are continuous random variables?\na. The number of new accounts established by a salesperson in a year.\nb. The time between customer arrivals to a bank ATM.\nc. The number of customers in Big Nick’s barber shop.\nd. The amount of fuel in your car’s gas tank.\ne. The number of minorities on a jury.\nf. The outside temperature today.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Probability and Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "3_randomVar_discrete.html",
+    "href": "3_randomVar_discrete.html",
+    "title": "3  Discrete Probability Distributions",
+    "section": "",
+    "text": "3.1 Probability distribution of Discrete r.v: Probability mass function (PMF)\nSuppose \\(X\\) is a discrete random variable. The probability mass function (PMF) of \\(X\\) can be denoted as \\(f(x)\\) where\n\\[ f(x)=P(X=x) \\]For each possible outcome \\(x\\) ; \\(f(x)\\) must satisfies:\nThe PMF \\(f(x)\\) is also called probability distribution of the discrte random variable \\(X\\).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discrete Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "3_randomVar_discrete.html#probability-distribution-of-discrete-r.v-probability-mass-function-pmf",
+    "href": "3_randomVar_discrete.html#probability-distribution-of-discrete-r.v-probability-mass-function-pmf",
+    "title": "3  Discrete Probability Distributions",
+    "section": "",
+    "text": "\\[f(x) \\ge 0\\]\n\\[\\sum _x f(x)=1\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discrete Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "3_randomVar_discrete.html#mean-variance-and-standard-deviation-of-discrete-r.v",
+    "href": "3_randomVar_discrete.html#mean-variance-and-standard-deviation-of-discrete-r.v",
+    "title": "3  Discrete Probability Distributions",
+    "section": "3.2 Mean, Variance and Standard deviation of discrete r.v",
+    "text": "3.2 Mean, Variance and Standard deviation of discrete r.v\n(a) The expected value of \\(X\\) the mean of \\(X\\) is denoted by \\(E(X)\\) and defined by:\n\\[ E(X)=\\sum_x x.f(x)  \\tag{3.1}\\]\nThe expected value of \\(X\\) is sometimes called the population mean of \\(X\\) that is \\(\\mu=E(X)\\).\n(b) The variance of \\(X\\) is\n\\[Var(X)=\\sigma^2 =E[(X-\\mu)^2]=\\sum_x (x-\\mu)^2 f(x)\\]Alternative:\n\\[Var (X)=E(X^2)-\\mu^2 \\tag{3.2}\\] Where,\n\\[E(X^2)=\\sum_{x} x^2.f(x)\\]\nProblem 3.1: Consider the following probability distribution of discrete r.v \\(X\\).\n\n\n\n\\(x\\)\n1\n2\n3\n\n\n\\(f(x)\\)\n0.25\n0.40\n0.35\n\n\n\nCompute \\(E(X)\\), \\(Var(X)\\) and \\(SD(X)\\).\nSolution:\nMean or Expected value of \\(X\\):\n\\[\n\\mu= E(X)=\\sum _{x=1}^3 x\\cdot f(x)=1\\times 0.25+2\\times 0.40+3\\times 0.35=2.1\n\\]\nVariance of \\(X\\): \\[\n\\sigma^2 =E(X^2)-\\mu^2=\\sum_{x=0}^3 x^2 \\cdot f(x)-\\mu^2\n\\]\n\\[\n=[1^2 \\times0.25+2^2\\times 0.40+3^2\\times 0.35]-(2.1)^2=5-4.41=0.59\n\\]\nStandard deviation of \\(X\\):\n\\(SD(X)=\\sigma =\\sqrt {0.59}=0.7681\\)\n\n\n\n\n\n\n\n\nFigure 3.1: Probability histogram of of X (Example 3.1)\n\n\n\n\n\nNote: \\(E(X)\\) measures the center of the distribution and \\(SD(X)\\) measures the spread of the distribution around the mean.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discrete Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "3_randomVar_discrete.html#properties-of-e.-and-var.",
+    "href": "3_randomVar_discrete.html#properties-of-e.-and-var.",
+    "title": "3  Discrete Probability Distributions",
+    "section": "3.3 Properties of E(.) and Var(.)",
+    "text": "3.3 Properties of E(.) and Var(.)\nIf \\(a\\) and \\(b\\) are constants, then\na) \\(E(b)=b\\)\nb) \\(E(aX+b)=aE(X)+b\\)\nc) \\(Var(b)=0\\)\nd) \\(Var(aX+b)=a^2 \\ \\ Var (X)\\)\nExercises 3.1 :\n\nLet the random variable \\(X\\) represent the number of defective parts for a machine when 3 parts are sampled from a production line and tested. The following is the probability distribution of \\(X\\).\n\n\n\n\n\\(x\\)\n0\n1\n2\n3\n\n\n\\(f(x)\\)\n0.51\n0.38\n0.10\n0.01\n\n\n\nCalculate average and standard deviation of number of defective parts.\n\nA chemical supply company ships a certain solvent in 10-gallon drums. Let X represent the number of drums ordered by a randomly chosen customer. Assume X has the following probability mass function:\n\n\n\n\\(x\\)\n1\n2\n3\n4\n5\n\n\n\\(f(x)\\)\n0.4\n0.2\n0.2\n0.1\n0.1\n\n\n\na. Find the mean number of drums ordered.\nb. Find the variance of the number of drums ordered.\nc. Find the standard deviation of the number of drums ordered.\nd. Let Y be the number of gallons ordered. Find the probability mass function of Y .\ne. Find the mean number of gallons ordered.\nf. Find the variance of the number of gallons ordered.\ng. Find the standard deviation of the number of gallons ordered.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discrete Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "3_randomVar_discrete.html#binomial-distribution",
+    "href": "3_randomVar_discrete.html#binomial-distribution",
+    "title": "3  Discrete Probability Distributions",
+    "section": "3.4 Binomial distribution",
+    "text": "3.4 Binomial distribution\nLet \\(X\\) be the number of “successes” in \\(n\\) independent Bernoulli trial (a trial which has TWO outcomes-success or failure).\nAssume \\(Pr(success)=p \\ \\ (say)\\) remains constant from trial to trial. Then the PMF of \\(X\\) is:\nPMF:\n\\[\nP(X=x)=f(x)=\\binom{n}{x}p^x (1-p)^{n-x} \\ \\ ; \\ \\ x=0,1,...,n\n\\]\nWe often use \\(q=1-p\\).\nWith,\n\n\\(\\sum_{x=0}^n f(x)=1\\)\nMean: \\(\\mu=E(X)=np\\)\nVariance: \\(\\sigma^2=npq=np(1-p)\\)\n\nExample: For \\(n=3\\) and \\(p=0.60\\) the binomial probabilities are:\n\\(P(X=0)=f(0)=\\binom{3}{0}(0.60)^0 (0.40)^{3-0}=0.064\\)\n\\(P(X=1)=f(1)=\\binom{3}{1}(0.60)^1 (0.40)^{3-1}=0.288\\)\n\\(P(X=2)=f(2)=\\binom{3}{2}(0.60)^2 (0.40)^{3-2}=0.432\\)\n\\(P(X=3)=f(3)=\\binom{3}{3}(0.60)^3 (0.40)^{3-3}=0.216\\)\nAND,\n\\[\n\\mathrm{Mean} , \\mu=E(X)=np=3\\times 0.6=1.8\n\\]\n\\[\n\\mathrm{Variance} , \\sigma^2 =npq=3\\times0.60\\times0.40=0.72\n\\]\n\\[\nSD(X), \\sigma =\\sqrt {0.72} \\approx 0.85\n\\]\nProblem 3.2: Let \\(X \\sim \\text{Bin}(8, 0.4)\\). Find\n\n\\(P(X = 2)\\)\n\\(P(X = 4)\\)\n\\(P(X &lt; 2)\\)\n\\(P(X &gt; 6)\\)\n\\(\\mu_X\\)\n\\(\\sigma_X^2\\)\n\nProblem 3.3: A large industrial firm allows a discount on any invoice that is paid within 30 days. Of all invoices, 10% receive the discount. In a company audit, 12 invoices are sampled at random.\n(a). What is the probability that fewer than 4 of the 12 sampled invoices receive the discount?\n(b). What is the probability that more than 1 of the 12 sampled invoices receives a discount?\nProblem 3.4: Of all the weld failures in a certain assembly, 85% of them occur in the weld metal itself, and the remaining 15% occur in the base metal. A sample of 20 weld failures is examined.\n(a). What is the probability that exactly five of them are base metal failures?\n(b). What is the probability that fewer than four of them are base metal failures?\n(c). What is the probability that none of them are base metal failures?\nProblem 3.5: Of the items manufactured by a certain process, 20% are defective. Of the defective items, 60% can be repaired.\n(a). Find the probability that a randomly chosen item is defective and cannot be repaired.\n(b). Find the probability that exactly 2 of 20 randomly chosen items are defective and cannot be repaired.\n\n\n\n\n\n\nNoteDistribution of sample proportion (\\(\\hat p\\))\n\n\n\nIn many situations the success probability \\(p\\) associated with a certain Bernoulli trial remains unknown, and we have to estimate its value. A simple way to do this is to conduct n independent trials and count the number \\(X\\) of successes. To estimate the success probability \\(p\\) we compute the sample proportion \\(\\hat p\\).\n\\[\n\\hat p=\\frac{\\mathrm{number \\ \\ of \\  \\ successes}}{\\mathrm{number \\ \\ of \\ \\ trials}}=\\frac{X}{n}\n\\] So,\n\n\\(E(\\hat p)=p\\)\n\\(Var(\\hat p)=\\frac{p(1-p)}{n}\\)\n\\(SD(\\hat p)=\\sqrt{\\frac{p(1-p)}{n}}\\)\n\nWe will use this concept in upcoming Chapter of Statistical Quality Control (SQC) for control charts of Fraction-Defective.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discrete Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "3_randomVar_discrete.html#poisson-distribution",
+    "href": "3_randomVar_discrete.html#poisson-distribution",
+    "title": "3  Discrete Probability Distributions",
+    "section": "3.5 Poisson distribution",
+    "text": "3.5 Poisson distribution\nSuppose \\(X\\) be the number occurrences in a given interval and\n\\(\\mu\\) is the expected value or mean number of occurrences/rate of occurrences in an interval. Then PMF of \\(X\\) is:\nPMF:\n\\[\nP(X=x)=\\frac{e^{-\\mu}\\mu^x}{x!} \\ \\ ; \\ \\ x=0,1,...,\\infty\n\\]\nWith,\n\n\\(\\sum_{x=0}^{\\infty} f(x)=1\\)\nMean, \\(E(X)=\\mu\\)\nVariance, \\(Var(X)=\\sigma^2=\\mu\\)\n\nWe write, \\(X\\sim Pois(\\mu)\\)\nProblem 3.6: Let \\(X \\sim Pois(4)\\). Find\na. P(X = 1)\nb. P(X = 0)\nc. P(X &lt; 2)\nd. P(X &gt; 1)\ne. \\(\\mu_X\\)\nf. \\(\\sigma_X\\)\nProblem 3.7: A local drugstore owner knows that, on average, 100 people enter his store each hour.\n(a) Find the probability that in a given 3-minute period nobody enters the store.\n(b) Find the probability that in a given 5-minute period more than 2 people enter the store.\nProblem 3.8: While inspecting a fabric in a continuous roll, the mean number of defects per meter is 0.25. Determine the probability that 10 m length of fabric will contain (a) 0, (b) 1, (c) 2, (d) less than or equal to 2 defects.\nProblem 3.9: A roll of fabric contains on an average 5 defects scattered at random in 100 \\(m^2\\). Pieces of fabric, 5 m by 2 m, are cut from the roll. Determine the probability that\n(a) a piece contains no defects;\n(b) a piece will contain more than one defects;\n(c) a piece will contain fewer than two defects;\n(d) five pieces selected at random will all be free from defects.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discrete Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "4_continuousVarNormal.html",
+    "href": "4_continuousVarNormal.html",
+    "title": "4  Continuous r.v and probability density function",
+    "section": "",
+    "text": "4.1 Definition\nA continuous r.v \\(X\\) must have a probability density function (PDF) \\(f(x)\\) such that\n1) \\(f(x) \\ge 0\\) [Non-negativity]\n2) \\(\\int_{x\\in \\mathbb{R}} f(x)dx =1\\) [Total AREA under the curve \\(f(x)\\) always 1]\n3) \\(P(a&lt;X&lt;b)=\\int_a^b f(x) dx\\)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Continuous r.v and probability density function</span>"
+    ]
+  },
+  {
+    "objectID": "4_continuousVarNormal.html#illustration-with-an-example",
+    "href": "4_continuousVarNormal.html#illustration-with-an-example",
+    "title": "4  Continuous r.v and probability density function",
+    "section": "4.2 Illustration with an example",
+    "text": "4.2 Illustration with an example\nGiven \\(f(x)=\\frac{1}{2}x \\ \\ ; 0\\le x\\le 2\\)\na) Show/plot the graph of \\(f(x)\\).\nb) Is \\(f(x)\\) a PDF?\nc) Find \\(P(X&lt;1.0)\\).\nd) Find \\(P(X=1.0)\\)\n\n\n\n\n\n\nNote\n\n\n\nWe always remember that Probability in an interval of \\(X\\) is actually the \\(AREA\\) under the pdf \\(f(x)\\).\n\n\nProblem 4.1 A random variable has the following density function.\n\\[f(x)=1-0.5x \\ \\ ; \\ \\ 0&lt;x&lt;2\\]\na) Graph the density function.\nb) Verify that \\(f(x)\\) is a density function.\nc) Fond \\(P(X&gt;1)\\).\nd) Find \\(P(X&lt;0.5)\\).\ne) Find \\(P(X=1.5)\\).\nN.B: \\(P(X=a)=0\\) as well as \\(P(X=b)=0\\). So, \\(P(X\\le a )\\) is same as \\(P(X&lt;a)\\).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Continuous r.v and probability density function</span>"
+    ]
+  },
+  {
+    "objectID": "4_continuousVarNormal.html#cdf-of-continuous-r.v-x",
+    "href": "4_continuousVarNormal.html#cdf-of-continuous-r.v-x",
+    "title": "4  Continuous r.v and probability density function",
+    "section": "4.3 CDF of continuous r.v \\(X\\)",
+    "text": "4.3 CDF of continuous r.v \\(X\\)\nBy definition, CDF,\n\\[F(x)=P(X\\le x)= \\int_{-\\infty}^{x} f(x)dx\\]\nTherefore,\n\n\\(f(x)=\\frac{d}{dx} F(x)\\).\n\\(P(a&lt;X&lt;b)=F(b)-F(a)\\).\n\nProblem 4.2 (Walpole et al. 2017)Consider the probability density function (PDF):\n\\[f(x)=k\\sqrt x \\ \\ ; \\  \\ 0&lt;x&lt;1\\]\n(a) Evaluate \\(k\\).\n(b) Find \\(F(x)\\) and use it to evaluate \\(P(0.3&lt;X&lt;0.6)\\).\nSolution:\n(a) Since \\(f(x)\\) is a PDF so\n\\[\\int_{-\\infty}^{+\\infty} f(x)dx =1\\]\n\\[\\implies \\int_{0}^{1} k\\sqrt x dx=1\\]\n\\[\\implies k \\int_{0}^{1} x^{\\frac{1}{2}} \\  \\ dx=1\\]\n\\[\\implies k \\left [ \\frac{x^{\\frac{1}{2}+1}}{\\frac{1}{2}+1} \\right]_{0}^{1}=1\\]\n\\[\\implies k \\cdot \\frac{2}{3} \\left [ x^{\\frac{3}{2}}    \\right]_{0}^{1}=1 \\]\n\\[\\implies k\\cdot \\frac{2}{3} [ 1^{3/2} -0^{3/2}]=1\\]\n\\[\\implies k\\cdot \\frac{2}{3}\\cdot 1=1\\]\n\\[\\therefore k=\\frac{3}{2}\\]\nSo, \\(f(x)=\\frac{3}{2} \\sqrt x \\  \\; \\  \\ 0&lt;x&lt;1\\)\n(b) By definition\n\\[F(x)=P(X\\le x) \\]\n\\[=\\int_{0}^{x} f(x) \\  \\ dx=\\int_{0}^{x} \\frac{3}{2} x^{\\frac {1}{2}} dx\\]\n\\[=\\frac{3}{2} \\left [\\frac {x^{\\frac{3}{2}} }{\\frac{3}{2}}  \\right]_{0}^{x}\\]\n\\[= x^{\\frac {3}{2}}\\]\n\\[\\therefore F(x)=x^{\\frac{3}{2}}   \\ \\ ; \\  \\ 0&lt;x&lt;1\\]\nNow,\n\\[P(0.3&lt;X&lt;0.6)=F(0.6)-F(0.3)=(0.6)^\\frac{3}{2}-(0.3)^\\frac{3}{2}=0.3005 \\]\nProblem 4.3 (Walpole et al. 2017) Suppose that the error in the reaction temperature, in \\(^0C\\), for a controlled laboratory experiment is a continuous random variable \\(X\\) having the probability density function :\n\\[f(x) =\\frac{1}{3} x^2 \\ \\ ;  \\ \\ -1&lt;x&lt;2\\]\n(a) Verify that \\(f(x)\\) is a PDF.\n(b) Find \\(F(x)\\) and then evaluate \\(P(0&lt;X\\le 1)\\).\n\nSolution: TRY yourself.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Continuous r.v and probability density function</span>"
+    ]
+  },
+  {
+    "objectID": "4_continuousVarNormal.html#expectation-and-variance-of-continuous-r.v",
+    "href": "4_continuousVarNormal.html#expectation-and-variance-of-continuous-r.v",
+    "title": "4  Continuous r.v and probability density function",
+    "section": "4.4 Expectation and variance of continuous r.v",
+    "text": "4.4 Expectation and variance of continuous r.v\nIf \\(X\\) is a continuous r.v with PDF \\(f(x)\\) then\nExpected value of \\(X\\) is\n\\[\\mu=E(X)= \\int_{x\\in \\mathbb{R}} x\\cdot f(x)dx\\] Variance of \\(X\\) is\n\\[Var(X)=E(X^2)-\\mu^2=\\int_{x\\in \\mathbb{R}} x^2\\cdot f(x)dx-\\mu^2\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Continuous r.v and probability density function</span>"
+    ]
+  },
+  {
+    "objectID": "4_continuousVarNormal.html#uniform-distribution",
+    "href": "4_continuousVarNormal.html#uniform-distribution",
+    "title": "4  Continuous r.v and probability density function",
+    "section": "4.5 Uniform distribution",
+    "text": "4.5 Uniform distribution\nA continuous r.v \\(X\\) is said to be uniform r.v ranges between \\(a\\) to \\(b\\) if it has the following PDF\n\\[f(x)=\\frac{1}{b-a} \\ \\ ; \\ \\ a&lt;x&lt;b \\tag{4.1}\\]\n\n\n\n\n\n\nFigure 4.1: Graph of f(x)\n\n\n\nwith\nMean: \\(\\mu=E(X)=\\frac{a+b}{2}\\)\nVariance: \\(\\sigma^2=\\frac{(b-a)^2}{12}\\)\nWe write, \\(X\\sim U(a,b)\\)\n\n4.5.1 Finding probability for uniform r.v\nIf \\(X\\sim U(a,b)\\) then the \\(P(x_1&lt;X&lt;x_2)\\) is actually the area of the shaded rectangle.\n\n\n\nComputing area for an interval of Uniform distribution\n\n\nThat is,\n\\[P(x_1&lt;X&lt;x_2)=Base\\times Height=(x_2-x_1)\\times \\frac{1}{b-a}\\]\nProblem 4.4 When a motorist stops at a red light at a certain intersection, the waiting time for the light to turn green, in seconds, is uniformly distributed on the interval (0, 30).\n\nFind the probability that the waiting time is between 10 and 15 seconds.\nFind the mean and variance of the waiting time.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Continuous r.v and probability density function</span>"
+    ]
+  },
+  {
+    "objectID": "4_continuousVarNormal.html#normal-or-gaussian-r.v",
+    "href": "4_continuousVarNormal.html#normal-or-gaussian-r.v",
+    "title": "4  Continuous r.v and probability density function",
+    "section": "4.6 Normal or Gaussian r.v",
+    "text": "4.6 Normal or Gaussian r.v\nThe most important probability distribution for describing a continuous random variable is the normal probability distribution. The normal distribution has been used in a wide variety of practical applications in which the random variables are heights and weights of people, test scores, scientific measurements, amounts of rainfall, and other similar values.\n\n4.6.1 Definition\nA continuous r.v \\(X\\) is said to be normal r.v if it has the following PDF:\n\\[f(x)=\\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{1}{2} (\\frac{x-\\mu}{\\sigma})^2}\\ \\ ; -\\infty&lt;x&lt;\\infty \\tag{4.2}\\]\nThe graph of \\(f(x)\\) is called normal curve (Figure 4.2).\n\n\n\n\n\n\n\n\nFigure 4.2: Normal Curve\n\n\n\n\n\nMean: \\(E(X)=\\mu\\)\nVariance: \\(Var(X)=\\sigma^2\\)\nWe write: \\(X\\sim N(\\mu , \\sigma^2)\\)\nProperties of normal distribution\n\nThe total area under the normal curve \\(f(x)\\) is 1 that is\n\\[\\int_{-\\infty}^{\\infty} f(x)dx=1\\]\nNormal distribution is symmetric about mean, \\(\\mu\\)\nMean, median and mode is identical in normal distribution that is \\(Mean=Median=Mode=\\mu\\)\nAlmost \\(99\\%\\) observations of \\(X\\) lie within 3 standard deviation of mean that is\n\\[P(\\mu-3\\sigma&lt;X&lt;\\mu+3\\sigma)\\approx 0.99\\]\nAlmost \\(95\\%\\) observations of \\(X\\) lie within 2 standard deviation of mean that is \\[P(\\mu-2\\sigma&lt;X&lt;\\mu+2\\sigma)\\approx 0.95\\]\nAlmost \\(68\\%\\) observations of \\(X\\) lie within 1 standard deviation of mean that is \\[P(\\mu-\\sigma&lt;X&lt;\\mu+\\sigma)\\approx 0.68\\]\n\n\n\n4.6.2 Standard normal r.v\nSuppose \\(X\\sim N(\\mu, \\sigma^2)\\). Then the variable \\(Z=\\frac{X-\\mu}{\\sigma}\\) is said to be standard normal variable with PDF\n\\[f(z)=\\frac{1}{\\sqrt {2\\pi}} e^{-\\frac{1}{2}z^2} \\ \\ ; -\\infty&lt;z&lt;\\infty \\tag{4.3}\\]\nMean: \\(E(Z)=0\\)\nVariance: \\(Var(Z)=1\\)\nWe write: \\(Z\\sim N(0,1)\\)\n\n\n\n\n\n\n\n\nFigure 4.3: Standard normal curve\n\n\n\n\n\n\n\n4.6.3 Computing probability(area) under standard normal curve\nTo compute area (probability) under the standard normal curve for a given interval of \\(z\\) we use standard Normal Distribution table which provides cumulative probabilities.\nRULE-I: Suppose we want to find \\(P(Z&lt;1.25)\\).\nFrom TABLE A.2 in Navidi (2011) we have\n\\[P(Z&lt;1.25)=0.8944\\]\n\nThe probability \\(P(Z&lt;1.25)\\) is shown in Figure 4.4.\n\n\n\n\n\n\n\n\nFigure 4.4: Area under standard normal curve for Z&lt;1.25\n\n\n\n\n\nRULE-II: Now we find \\(P(Z&gt;1.36)\\)\nSo, due to symmetry we can write \\(P(Z&gt;1.36)=P(Z&lt;-1.36)=0.0869\\)\n\n\n\n\n\n\n\n\n\nFigure 4.5: Area under standard normal curve for Z&gt;1.36\n\n\n\n\n\nRULE-III: Let us evaluate \\(P(-1.96&lt;Z&lt;2.58)\\).\nWe can write\n\\[=P(-1.96&lt;Z&lt;2.58)\\]\n\\[=P(Z&lt;2.58)-P(Z&lt;-1.96)\\]\n\\[=0.9951-0.0250=0.9701\\]\n\n\n\n\n\n\n\n\nFigure 4.6: Area under standard normal curve for -1.96&lt;Z&lt;2.58\n\n\n\n\n\n\n\n4.6.4 Finding quantiles (percentiles, quartiles, deciles etc.) of \\(Z\\)\nWhat is the \\(90^{th}\\) percentile of \\(Z\\)? To answer this question, let \\(k\\) is the \\(90^{th}\\) percentile of \\(Z\\). So we can write\n\\[P(Z&lt;k)=0.90 \\ \\  \\ \\ \\ \\ \\ \\ \\ \\cdot \\cdot \\cdot (1)\\]\nFrom TABLE A.2 in Navidi (2011) we have\n\\[P(Z&lt;1.28)=0.90 \\ \\  \\ \\ \\ \\ \\ \\ \\ \\cdot \\cdot \\cdot(2)\\]\nComparing eq.(1) with eq.(2) we have \\(k=1.28\\). So the \\(90^{th}\\) percentile of \\(Z\\) is \\(1.28\\).\nProblem 1 Find \\(c\\) such that \\(P(Z&gt;c)=0.05\\).\nProblem 2 Find \\(c\\) such that \\(P(-c&lt;Z&lt;c)=0.95\\).\n\n\n4.6.5 Computing probability(area) under normal curve:\nProblem 4.5 Suppose \\(X\\sim N(30, 5^2)\\) . Then find the following:\na) \\(P(X&lt;22)\\)\nb) \\(P(X&gt;44)\\)\nc) \\(P(20&lt;X&lt;35)\\)\nd) If \\(P(X&lt;x)=0.25\\) then find the value of \\(x\\).\nSolution:\nHere, \\(\\mu=30\\) and \\(\\sigma=5\\)\n\na) \\(P(X&lt;22)=P(\\frac{X-\\mu}{\\sigma}&lt;\\frac{22-30}{5})=P(Z&lt;-1.60)=0.0548\\).\n\nb) \\(P(X&gt;44)=P(\\frac{X-\\mu}{\\sigma}&gt;\\frac{44-30}{5})\\)\n\\(=P(Z&gt;2.80)=P(Z&lt;-2.80)=0.0026\\)\n\nc) \\(P(20&lt;X&lt;35)=P(\\frac{20-30}{5}&lt;\\frac{X-\\mu}{\\sigma}&lt;\\frac{35-30}{5})\\)\n\\(=P(-2&lt;Z&lt;1)=P(Z&lt;1)-P(Z&lt;-2)\\)\n\\(=0.8413-0.0228=0.8185\\)\n\nd) To find the value of \\(x\\) we proceed this way.\n\\[P(X&lt;x)=0.25\\]\n\\[\\implies P(\\frac{X-\\mu}{\\sigma}&lt;\\frac{x-30}{5})=0.25\\]\n\\[\\implies P(Z&lt;\\frac{x-30}{5})=0.25 \\ \\ \\ \\ \\ \\cdot \\cdot \\cdot (1)\\]\nFrom TABLE (Appendix B) we have\n\\[P(Z&lt;-0.67)=0.25  \\ \\ \\ \\ \\cdot \\cdot \\cdot (2)\\]\nComparing (1) with (2) we can write\n\\[\\frac{x-30}{5}=-0.67\\]\n\\[\\implies x=30+(-0.67)\\times 5\\]\n\\[\\therefore x=26.65\\]\n\n\n\n\n\n\nNote\n\n\n\nIf \\(P(X&lt;x)=p\\) and\n\\(P(Z&lt;z)=p\\) then\n\\[x=\\mu+z\\sigma\\]\n\n\n\n\n4.6.6 Applications of the Normal Distribution (Walpole et al. 2017)\nExample 6.7: A certain type of storage battery lasts, on average, 3.0 years with a standard deviation of 0.5 year. Assuming that battery life is normally distributed, find the probability that a given battery will last less than 2.3 years.\nExample 6.8 : An electrical firm manufactures light bulbs that have a life, before burn-out, that is normally distributed with mean equal to 800 hours and a standard deviation of 40 hours. Find the probability that a bulb burns between 778 and 834 hours.\n*Example 6.9 : In an industrial process, the diameter of a ball bearing is an important measurement. The buyer sets specifications for the diameter to be \\(3.0 \\pm 0.01\\) cm. The implication is that no part falling outside these specifications will be accepted. It is known that in the process the diameter of a ball bearing has a normal distribution with mean \\(\\mu = 3.0\\) and standard deviation \\(\\sigma = 0.005\\). On average, how many manufactured ball bearings will be scrapped?\nExample 6.10 : Gauges are used to reject all components for which a certain dimension is not within the specification \\(1.50 \\pm d\\). It is known that this measurement is normally distributed with a mean of 1.50 and a standard deviation of 0.2. Determine the value d such that the specifications “cover” 95% of the measurements.\nSolution:\nLet, \\(X=measurement \\ \\ of \\ \\ certain \\ \\ dimension\\)\nGiven, \\(X\\sim N(1.5,0.2)\\)\nAccording to question,\n\\(P(1.5-d&lt;X&lt;1.5+d)=0.95\\)\nSo, \\(P(X&lt;1.5-d)+P(X&gt;1.5+d)=0.05\\)\n\nSo, \\(P(X &lt;1.5-d)=0.025  \\ \\ \\ \\ \\cdot \\cdot \\cdot(1)\\)\n\\(\\implies P(\\frac{X-\\mu}{\\sigma} &lt;\\frac{1.5-d-1.5}{0.2})=0.025\\)\n\\(\\implies P(Z&lt;\\frac{-d}{0.2})=0.025 \\ \\ \\ \\ \\cdot \\cdot \\cdot(1)\\)\nFrom TABLE A.2 we have\n\\(P(Z&lt;-1.96)=0.025 \\ \\ \\ \\ \\ \\cdot \\cdot\\cdot(2)\\)\nComparing eq.(1) with eq. (2) we have\n\\(\\frac{-d}{0.2}=-1.96\\)\n\\(\\implies -d=-0.392\\)\n\\(\\therefore d=0.392\\)\nAlternative:\n\\(P(X &lt;1.5-d)=0.025  \\ \\ \\ \\ \\cdot \\cdot \\cdot(1)\\)\nBut, \\(P(Z&lt;-1.96)=0.025 \\ \\ \\ \\ \\cdot \\cdot \\cdot (2)\\)\nHence, \\(1.5-d=\\mu+z\\sigma\\); where \\(z=-1.96\\)\n\\(\\implies 1.5-d=1.5-1.96\\times 0.2\\)\n\\(\\therefore d=0.392\\)\n*Exercise 6.11 : A soft-drink machine is regulated so that it discharges an average of 200 milliliters per cup. If the amount of drink is normally distributed with a standard deviation equal to 15 milliliters,\n\nwhat fraction of the cups will contain more than 224 milliliters?\nwhat is the probability that a cup contains between 191 and 209 milliliters?\nhow many cups will probably overflow if 230-milliliter cups are used for the next 1000 drinks?\nbelow what value do we get the smallest 25% of the drinks?\n\n*Exercise 6.14 The finished inside diameter of a piston ring is normally distributed with a mean of 10 centimeters and a standard deviation of 0.03 centimeter.\n\nWhat proportion of rings will have inside diameters exceeding 10.075 centimeters?\nWhat is the probability that a piston ring will have an inside diameter between 9.97 and 10.03 centimeters?\nBelow what value of inside diameter will 15% of the piston rings fall?\n\nExercise 6.17 : The average life of a certain type of small motor is 10 years with a standard deviation of 2 years. The manufacturer replaces free all motors that fail while under guarantee. If she is willing to replace only 3% of the motors that fail, how long a guarantee should be offered? Assume that the lifetime of a motor follows a normal distribution.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Continuous r.v and probability density function</span>"
+    ]
+  },
+  {
+    "objectID": "4_continuousVarNormal.html#some-important-derived-continuous-distribution",
+    "href": "4_continuousVarNormal.html#some-important-derived-continuous-distribution",
+    "title": "4  Continuous r.v and probability density function",
+    "section": "4.7 Some important derived continuous distribution",
+    "text": "4.7 Some important derived continuous distribution\n\n4.7.1 Chi-square (\\(\\chi^2\\)) distribution\nThe continuous random variable X has a chi-squared distribution, with \\(\\nu\\) degrees of freedom, if its density function is given by \\[f(x)=\\frac{1}{2^{\\nu/2}\\Gamma (\\nu /2)}x^{\\nu/2 -1}e^{-x/2}\\ \\ ; \\ \\ x&gt;0\\]\nWhere \\(\\nu\\) is a positive integer.\nThe mean and variance of the chi-squared distribution are \\[\\mu=\\nu \\ \\ \\mathrm{and}\\ \\  \\sigma^2=2\\nu\\]\n\n\n4.7.2 \\(t\\)-distribution\n\n\n4.7.3 \\(F\\)- distribution\n\n\n\n\nNavidi, William Cyrus. 2011. Statistics for Engineers and Scientists. 3rd ed. New York: McGraw-Hill.\n\n\nWalpole, Ronald E., Raymond H. Myers, Sharon L. Myers, and Keying Ye. 2017. Probability & statistics for engineers & scientists: MyStatLab update. Ninth edition. Boston: Pearson.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Continuous r.v and probability density function</span>"
+    ]
+  },
+  {
+    "objectID": "5_estimation_smplDist.html",
+    "href": "5_estimation_smplDist.html",
+    "title": "5  Estimation and Sampling Distribution",
+    "section": "",
+    "text": "5.1 Introduction\nEstimation refers to finding the value of an unknown population parameter based on the sample selected from that population. Estimations are of two types- (i) Point estimation (ii) Interval estimation. First we discuss about point estimation, then sampling distribution of point estimators which will be needed to understand interval estimation.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Estimation and Sampling Distribution</span>"
+    ]
+  },
+  {
+    "objectID": "5_estimation_smplDist.html#introduction",
+    "href": "5_estimation_smplDist.html#introduction",
+    "title": "5  Estimation and Sampling Distribution",
+    "section": "",
+    "text": "5.1.1 Point Estimation\nPoint estimation involves sample statistic(any function of the observations in a random sample) , a formula or function of sample statistics (point estimator) and estimate (the numerical value of the point estimator).\nFor example, suppose we draw a random sample say \\(x_1,x_2,...,x_n\\) from a population regarding a variable \\(X\\). Here\n\nParameter of interest: Population mean, \\(\\mu\\)\nPoint estimator of \\(\\mu\\) : Sample mean \\(\\bar X=\\frac{\\sum x}{n}\\)\n\nIf the we have a sample of size \\(n=4\\) and the values are: \\(x_1=25, x_2=30,x_3=29, x_4=31\\) , then the point estimate of \\(\\mu\\) is:\n\\[\n\\bar x=\\frac{25+30+29+31}{4}=28.75\n\\]\nAnother important population parameter is population variance, \\(\\sigma^2\\). And its point estimator is \\(S^2=\\frac{\\sum_{i=1}^n (x_i-\\bar X)^2}{n-1}\\)\nNote: Due to sampling variability point estimators are random variables.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Estimation and Sampling Distribution</span>"
+    ]
+  },
+  {
+    "objectID": "5_estimation_smplDist.html#sampling-distribution",
+    "href": "5_estimation_smplDist.html#sampling-distribution",
+    "title": "5  Estimation and Sampling Distribution",
+    "section": "5.2 Sampling distribution",
+    "text": "5.2 Sampling distribution\n\n\n\n\n\n\nImportantTheorem 5.1: Central Limit Theorem\n\n\n\n\n\n\n\n\n\n\n\n\nNoteTheorem 5.2\n\n\n\nLet \\(X_1, X_2, \\dots, X_n\\) be independent random variables that are all normal with mean \\(\\mu\\) and standard deviation \\(\\sigma\\). Let\n\\[\n\\bar{X} = \\frac{1}{n} \\sum_{i=1}^{n} X_i \\quad \\text{and} \\quad S^2 = \\frac{1}{n-1} \\sum_{i=1}^{n} (X_i - \\bar{X})^2.\n\\]\nThen the random variable \\(T = \\frac{\\bar{X} - \\mu}{S/\\sqrt{n}}\\) has a \\(t\\)-distribution with \\(v = n - 1\\) degrees of freedom.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Estimation and Sampling Distribution</span>"
+    ]
+  },
+  {
+    "objectID": "5_estimation_smplDist.html#interval-estimation",
+    "href": "5_estimation_smplDist.html#interval-estimation",
+    "title": "5  Estimation and Sampling Distribution",
+    "section": "5.3 Interval estimation",
+    "text": "5.3 Interval estimation\n\n5.3.1 Interval estimation for \\(\\mu\\) (when \\(\\sigma\\) is known)\n\n\n5.3.2 Interval estimation for \\(\\mu\\) (when \\(\\sigma\\) is Unknown)\n\n\n5.3.3 Interval estimation for \\(\\mu\\) in case of Large Sample",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Estimation and Sampling Distribution</span>"
+    ]
+  },
+  {
+    "objectID": "6_significanceTest.html",
+    "href": "6_significanceTest.html",
+    "title": "6  Significance test: Statistical Hypothesis Testing",
+    "section": "",
+    "text": "6.1 Definition Statistical Hypothesis\nA statistical hypothesis is a statement about the parameters of one or more populations.\nExample 1: A manufacturer claims that the mean life of a smartphone is more than 1.5 years.\nExample 2: A local courier service claims that they deliver a ordered product within 30 minutes on average.\nExample 3: A sports drink maker claims that the mean calorie content of its beverages is 72 calories per serving.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Significance test: Statistical Hypothesis Testing</span>"
+    ]
+  },
+  {
+    "objectID": "6_significanceTest.html#types-of-hypothesis",
+    "href": "6_significanceTest.html#types-of-hypothesis",
+    "title": "6  Significance test: Statistical Hypothesis Testing",
+    "section": "6.2 Types of hypothesis",
+    "text": "6.2 Types of hypothesis\nStatistical hypothesis are stated in two forms- (i) Null hypothesis (\\(H_0\\)) and (ii) Alternative hypothesis (\\(H_1\\)).\nBoth null and alternative hypothesis are the written about the parameter of interest based on the claim.\n\nWe will always state the null hypothesis as an equality claim.\nHowever, when the alternative hypothesis is stated with the “&lt;” sign, the implicit claim in the null hypothesis can be taken as ” ≥ “ or “=” sign.\nWhen the alternative hypothesis is stated with the “&gt;” sign, the implicit claim in the null hypothesis can be taken as “≤” or “=” sign.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Significance test: Statistical Hypothesis Testing</span>"
+    ]
+  },
+  {
+    "objectID": "6_significanceTest.html#developing-hypotheses",
+    "href": "6_significanceTest.html#developing-hypotheses",
+    "title": "6  Significance test: Statistical Hypothesis Testing",
+    "section": "6.3 Developing hypotheses",
+    "text": "6.3 Developing hypotheses\nTo develop or state null and alternative hypothesis, at first we have to clearly identify the “claim” about population parameter. Now we will see some examples.\nExample 1: A manufacturer claims that the mean life of a smartphone is more than 1.5 years.\nHypothesis:\n\n\\(H_0:\\mu=1.5\\)\n\\(\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\  H_1: \\mu&gt;1.5 \\ \\ (claim)\\)\n\nExample 2: A local courier service claims that they deliver a ordered product within 30 minutes on average.\nHypothesis:\n\n\\(H_0: \\mu=30\\)\n\\(\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ H_1: \\mu&lt;30 \\ \\ (claim)\\)\n\nExample 3: A sports drink maker claims that the mean calorie content of its beverages is 72 calories per serving.\nHypothesis:\n\n\\(\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ H_0: \\mu=72 \\ \\ (claim)\\)\n\\(H_1: \\mu \\ne 72\\)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Significance test: Statistical Hypothesis Testing</span>"
+    ]
+  },
+  {
+    "objectID": "6_significanceTest.html#types-of-test-based-on-alternative-hypothesis-h_1",
+    "href": "6_significanceTest.html#types-of-test-based-on-alternative-hypothesis-h_1",
+    "title": "6  Significance test: Statistical Hypothesis Testing",
+    "section": "6.4 Types of test based on alternative hypothesis \\(H_1\\)",
+    "text": "6.4 Types of test based on alternative hypothesis \\(H_1\\)\n\n\\(H_1: \\mu&lt; \\mu_0\\) (Lower tailed)\n\\(H_1: \\mu&gt; \\mu_0\\) (Upper tailed)\n\\(H_1: \\mu \\ne \\mu_0\\) (Two-tailed)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Significance test: Statistical Hypothesis Testing</span>"
+    ]
+  },
+  {
+    "objectID": "6_significanceTest.html#types-of-error-in-hypothesis-test-and-p-value",
+    "href": "6_significanceTest.html#types-of-error-in-hypothesis-test-and-p-value",
+    "title": "6  Significance test: Statistical Hypothesis Testing",
+    "section": "6.5 Types of error in hypothesis test and P-value",
+    "text": "6.5 Types of error in hypothesis test and P-value\nWhile testing a statistical hypothesis concerning population parameter we commit two types of errors.\n\nType I error occurs when we reject a TRUE \\(H_0\\)\nType II error occurs when we FAIL to reject a FALSE \\(H_0\\)\nThe Level of significance is the probability of comiting Type I error. It is denoted by \\(\\alpha\\).\n\n\\[\\alpha= P(Type \\ \\ I \\ \\ error)\\]\n\nThe probability of committing a Type II error, denoted by \\(\\beta\\).\n\n\\[\\beta =P(Type \\ \\ II \\ \\ error)\\]\n\n\n\n\n\n\nImportantNote\n\n\n\nType I error is more serious than Type II error. Because rejecting a TRUE statement is more devastating than FAIL to reject a FALSE statement. So, we always try to keep our probability of Type I error as small as possible (1% or at most 5%). For more detail see (keller2014?).\n\n\n\nP-value: If the null hypothesis is true, then a P-value (or probability value) of a hypothesis test is the probability of obtaining a sample statistic with a value as extreme or more extreme than the one determined from the sample data.\nThe smaller the P-value of the test, the more evidence there is to reject the null hypothesis. A very small P-value indicates an unusual event\n\n\n\n\n\n\n\nImportantP-value Explanation\n\n\n\nA hypothesis test functions like a legal trial. You start by assuming the null hypothesis (\\(H_0\\)) is true, just as a jury assumes a defendant is innocent until proven guilty.\nThe data you collect acts as the evidence. By comparing this evidence to your initial assumption, you calculate a p-value (ranging from 0 to 1), which quantifies how well the sample data “fits” with \\(H_0\\).\n\nA high p-value suggests the evidence is consistent with the null hypothesis.\nA low p-value indicates a sharp disagreement between the data and the null hypothesis.\n\nWhen the p-value is small enough, it provides “beyond a reasonable doubt” proof that the initial assumption is unlikely. At this point, you reject the null hypothesis and shift your belief to the alternative hypothesis (\\(H_1\\)).\n\n\nSo, how these hypotheses will be tested?\nTo test a hypothesis we have to determine\n\na test-statistic; and\nCritical/Rejection region based on the sampling distribution of test-statistic for a given \\(\\alpha\\) ;\nIf the value of test-statistic falls in Critical/Rejection region, then we reject Null (\\(H_0\\)) hypothesis; otherwise not. Or,\nIf P-value\\(\\le\\alpha\\) then we reject Null (\\(H_0\\)) hypothesis.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Significance test: Statistical Hypothesis Testing</span>"
+    ]
+  },
+  {
+    "objectID": "6_significanceTest.html#hypothesis-testing-concerning-population-mean-mu",
+    "href": "6_significanceTest.html#hypothesis-testing-concerning-population-mean-mu",
+    "title": "6  Significance test: Statistical Hypothesis Testing",
+    "section": "6.6 Hypothesis testing concerning population mean (\\(\\mu\\))",
+    "text": "6.6 Hypothesis testing concerning population mean (\\(\\mu\\))\nThe following two hypotheses tests are used concerning population mean (\\(\\mu\\)):\n1. One sample z-test (with known \\(\\sigma\\) )\n2. One sample t-test (with unknown \\(\\sigma\\))\n\n\n6.6.1 One sample z-test\nWhen sampling is from a normally distributed population or sample size is sufficiently large and the population variance is known, the test statistic for testing \\(H_0: \\mu=\\mu_0\\) at \\(\\alpha\\) is\n\\[z_0=\\frac{\\bar x-\\mu_0}{\\sigma /\\sqrt n}\\]\nDecision (Critical value approach): If calculated \\(z\\) falls in rejection region (CR) , then reject \\(H_0\\) . Otherwise, do not reject \\(H_0\\).\n\nFor lower tailed test, reject \\(H_0\\) if \\(z_0&lt;-z_\\alpha\\) ;\nFor upper tailed test, reject \\(H_0\\) if \\(z_0&gt; z_\\alpha\\) ;\nFor two-tailed test, reject \\(H_0\\) if \\(z_0&lt;-z_{\\alpha/2}\\) or \\(z_0&gt;z_{\\alpha/2}\\) .\n\nNB: Since \\(z\\)-distribution is symmetric about 0 so, a shortcut technique in CR/RR approach is:\n\nReject \\(H_0\\) if \\(|z_{0}|&gt;|z_{c}|\\) ; otherwise do not.\n\nDecision (P-value approach)\n\nP-value for \\(z\\)-statistic\n\n\n\n\n\n\n\nAlternative hypothesis\n\\(P\\)-value\nCalculator\nfunction\n\n\n\n\n\\(H_1: \\mu &lt;\\mu_0\\) (Left Tailed)\nArea in left tail \\(=P(Z&lt;z_0)\\)\n\\(P(z_0)\\)\n\n\n\\(H_1: \\mu&gt;\\mu_0\\) (Right Tailed)\nArea in right tail \\(=P(Z&gt;z_0)\\)\n\\(R(z_0)\\)\n\n\n\\(H_1: \\mu \\ne \\mu_0\\) (Two-tailed)\nArea in both tails= \\(2P(Z&lt;-|z_0|)\\)\nOR,\n\\(2P(Z&gt;|z_0|)\\)\n\\(2P(-|z_0|)\\)\nOR,\n\\(2R(|z_0|)\\)\n\n\n\nProblem 6.1: A new concrete mix is being designed to provide adequate compressive strength for concrete blocks. The specification for a particular application calls for the blocks to have a mean compressive strength \\(\\mu\\) greater than 1350 kPa. A sample of 100 blocks is produced and tested. Their mean compressive strength is 1356 kPa .Assume population standard deviation is 70 kPa (known).\n(a) Reframe/ formulate/ state the hypothesis.\n(b) Compute appropriate test statistic.\n(c) Compute P-value.\n(d) Critique/ Justify whether the blocks meet the specification.\n\nProblem 6.2: A fabric manufacturer placed an order to a yarn manufacturer for a large batch of yarn that has strength of 20 cN/tex. He/she will ask for replacement if mean strength is less than 20cN/tex.\nUpon delivery, the fabric manufacturer found that the average strength of the yarn is 19.65 cN/tex with 1.2 standard deviation based on 40 tests.\nCarry out a statistical test at 0.05 level of confidence to justify whether the fabric manufacturer would ask the yarn manufacturer for replacement of yarn batch.\n\nProblem 6.3: A process that manufactures steel bolts is supposed to be calibrated to produce bolts with a mean length of 5 cm. A sample of 100 bolts has a mean length of 5.02 cm with a standard deviation of 0.06 cm. Let \\(\\mu\\) be the mean length of bolts manufactured by this process .\n(a) Evaluate/Estimate the P-value for testing \\(H_0: \\mu=5\\) versus \\(H_1: \\mu \\ne 5\\).\n(b) Judge/Justify whether the process is properly calibrated or not.\nProblem 6.4: A certain type of stainless steel powder is supposed to have a mean particle diameter of \\(\\mu =15 \\mu m\\). A random sample of 87 particles had a mean diameter of \\(15.2 \\mu m\\), with a standard deviation of \\(1.8 \\mu m\\). A test is made of \\(H_0 : \\mu = 15\\) versus \\(H_1 : \\mu \\ne 15\\).\na. Find the P-value.\nb. Do you believe it is plausible that the mean diameter is \\(15 \\mu m\\), or are you convinced that it differs from \\(15 \\mu m\\)? Explain your reasoning.\n\n\n\n6.6.2 One-sample t-test",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Significance test: Statistical Hypothesis Testing</span>"
+    ]
+  },
+  {
+    "objectID": "6_significanceTest.html#two-sample-z-test",
+    "href": "6_significanceTest.html#two-sample-z-test",
+    "title": "6  Significance test: Statistical Hypothesis Testing",
+    "section": "6.7 Two-sample z-test",
+    "text": "6.7 Two-sample z-test",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Significance test: Statistical Hypothesis Testing</span>"
+    ]
+  },
+  {
+    "objectID": "6_significanceTest.html#two-sample-t-test-assuming-equal-variances",
+    "href": "6_significanceTest.html#two-sample-t-test-assuming-equal-variances",
+    "title": "6  Significance test: Statistical Hypothesis Testing",
+    "section": "6.8 Two-sample t-test (Assuming equal variances)",
+    "text": "6.8 Two-sample t-test (Assuming equal variances)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Significance test: Statistical Hypothesis Testing</span>"
+    ]
+  },
+  {
+    "objectID": "6_significanceTest.html#variance-test-single-population",
+    "href": "6_significanceTest.html#variance-test-single-population",
+    "title": "6  Significance test: Statistical Hypothesis Testing",
+    "section": "6.9 Variance test: Single population",
+    "text": "6.9 Variance test: Single population",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Significance test: Statistical Hypothesis Testing</span>"
+    ]
+  },
+  {
+    "objectID": "6_significanceTest.html#variance-test-two-populations",
+    "href": "6_significanceTest.html#variance-test-two-populations",
+    "title": "6  Significance test: Statistical Hypothesis Testing",
+    "section": "6.10 Variance test: Two populations",
+    "text": "6.10 Variance test: Two populations",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Significance test: Statistical Hypothesis Testing</span>"
+    ]
+  },
+  {
+    "objectID": "6_significanceTest.html#test-of-normality",
+    "href": "6_significanceTest.html#test-of-normality",
+    "title": "6  Significance test: Statistical Hypothesis Testing",
+    "section": "6.11 Test of Normality",
+    "text": "6.11 Test of Normality\n\n6.11.1 Graphical Methods\n\n\n6.11.2 Numerical methods",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Significance test: Statistical Hypothesis Testing</span>"
+    ]
+  },
+  {
+    "objectID": "7_slrMlr.html",
+    "href": "7_slrMlr.html",
+    "title": "7  Regression Analysis",
+    "section": "",
+    "text": "7.1 SLR\nProblem 7.1 (Walpole et al. 2017, 399): The following is a portion of a classic data set called the “pilot plot data” in Fitting Equations to Data by Daniel and Wood, published in 1971. The response y is the acid content of material produced by titration, whereas the regressor x is the organic acid content produced by extraction and weighing.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Regression Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "7_slrMlr.html#slr",
+    "href": "7_slrMlr.html#slr",
+    "title": "7  Regression Analysis",
+    "section": "",
+    "text": "ImportantSummary of Simple Linear Regression (SLR)\n\n\n\n1) The PRF : \\(y_i =\\alpha +\\beta x_i +\\epsilon_i\\)\n2) The OLS estimates of \\(\\alpha\\) and \\(\\beta\\) are:\n\\[a=\\bar y-b \\bar x\\]\n\\[b=\\frac{n\\sum xy-(\\sum x)(\\sum y)}{n\\sum x^2 -(\\sum x)^2}\\]\nrespectively.\nHence the estimated regression line is:\n\n\\[\\hat y_i =a+bx\\]\n3) Point prediction: For a given value of \\(X\\) say \\(x_g\\) the predicted value of \\(Y\\) is:\n\\[\\hat y_g=a+b *(x_g)\\]\n4) Goodness of fit for SLR:\n\\[R^2=\\frac{b^2(\\sum x^2 -n \\  \\bar x^2)}{\\sum y^2 -n \\ \\ \\bar y^2}\\ \\ ; \\ \\ 0\\le R^2\\le 1\\]\n5) Mean squared error (MSE): as an estimate of \\(\\sigma_e^2\\):\n\\[s_e^2=\\frac{\\sum_{i=1}^{n} (y_i -\\hat y_i)^2}{n-2}\\]\n6) Hypothesis test for \\(\\beta\\):\n\\[H_0: \\beta =c \\ \\ vs.\\]\n\\[H_1: \\beta \\ne c\\]\nTest statistic:\n\\[t_0=\\frac{b-c}{s.e(b)}\\]\nwhere, \\(s.e(b)=\\frac{s_e}{\\sqrt {\\sum (x-\\bar x)^2}}\\)\nUnder \\(H_0\\), \\(t_0\\) follows T-distribution with \\(n-2\\) df.\n\n\n\n\n\n\ny\n76\n62\n66\n58\n88\n70\n37\n82\n88\n43\n\n\nx\n123\n55\n100\n75\n159\n109\n48\n138\n164\n28",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Regression Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "7_slrMlr.html#mlr",
+    "href": "7_slrMlr.html#mlr",
+    "title": "7  Regression Analysis",
+    "section": "7.2 MLR",
+    "text": "7.2 MLR\n\n\n\n\nWalpole, Ronald E., Raymond H. Myers, Sharon L. Myers, and Keying Ye. 2017. Probability & statistics for engineers & scientists: MyStatLab update. Ninth edition. Boston: Pearson.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Regression Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "8_doe.html",
+    "href": "8_doe.html",
+    "title": "8  DoE",
+    "section": "",
+    "text": "8.1 Single factor: ANOVA",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>DoE</span>"
+    ]
+  },
+  {
+    "objectID": "8_doe.html#two-factor-experiment-factorial-anova",
+    "href": "8_doe.html#two-factor-experiment-factorial-anova",
+    "title": "8  DoE",
+    "section": "8.2 Two-factor experiment: Factorial ANOVA",
+    "text": "8.2 Two-factor experiment: Factorial ANOVA",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>DoE</span>"
+    ]
+  },
+  {
+    "objectID": "9_sqc.html",
+    "href": "9_sqc.html",
+    "title": "9  Statistical Quality Control",
+    "section": "",
+    "text": "9.1 Control Charts",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Quality Control</span>"
+    ]
+  },
+  {
+    "objectID": "9_sqc.html#process-capability",
+    "href": "9_sqc.html#process-capability",
+    "title": "9  Statistical Quality Control",
+    "section": "9.2 Process Capability",
+    "text": "9.2 Process Capability",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Quality Control</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "10  Summary",
+    "section": "",
+    "text": "In summary, this book is written in a concise format.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Belle, Gerald van. 2002. Statistical Rules of Thumb. 1st ed.\nNew York: Wiley-Interscience.\n\n\nMontgomery, Douglas C., and George C. Runger. 2014. Applied\nStatistics and Probability for Engineers. Sixth edition. Hoboken,\nNJ: John Wiley; Sons, Inc.\n\n\nNavidi, William Cyrus. 2011. Statistics for Engineers and\nScientists. 3rd ed. New York: McGraw-Hill.\n\n\nTippett, L. H. C. 1950. Technological Applications of\nStatistics. New York: Wiley.\n\n\nWalpole, Ronald E., Raymond H. Myers, Sharon L. Myers, and Keying Ye.\n2017. Probability & statistics for engineers & scientists:\nMyStatLab update. Ninth edition. Boston: Pearson.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
