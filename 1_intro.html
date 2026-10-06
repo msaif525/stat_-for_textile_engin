@@ -274,6 +274,7 @@ window.Quarto = {
   <li><a href="#data-viz.-for-qualitativecategorical-data" id="toc-data-viz.-for-qualitativecategorical-data" class="nav-link" data-scroll-target="#data-viz.-for-qualitativecategorical-data"><span class="header-section-number">1.7.1</span> Data viz.&nbsp;for Qualitative/categorical data</a></li>
   <li><a href="#data-viz.-for-quantitative-data" id="toc-data-viz.-for-quantitative-data" class="nav-link" data-scroll-target="#data-viz.-for-quantitative-data"><span class="header-section-number">1.7.2</span> Data viz.&nbsp;for Quantitative data:</a></li>
   </ul></li>
+  <li><a href="#exercise-1.2" id="toc-exercise-1.2" class="nav-link" data-scroll-target="#exercise-1.2"><span class="header-section-number">1.8</span> Exercise 1.2</a></li>
   </ul>
 </nav>
     </div>
@@ -711,15 +712,15 @@ Figure&nbsp;1.4: Box-plot of fuel consumption (in GpK)
 <table class="caption-top table">
 <caption>Performance Values for Catalyst 1 and Catalyst 2</caption>
 <colgroup>
-<col style="width: 26%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
+<col style="width: 22%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -776,16 +777,11 @@ Figure&nbsp;1.5: Comparison of Catalyst Performance: Catalyst 1 vs.&nbsp;Catalys
 </div>
 <p>Though the <strong>median</strong> yields are same for both catalysts but Catalyst 2 produces higher variability in yield. However overall maximum yield is obtained from Catalyst 2. So based on this visual inspection we can use Catalyst 2 (it is also cheaper!).</p>
 <p><strong>NOTE:</strong> To know more about box-plot please visit <a href="https://support.minitab.com/en-us/minitab/help-and-how-to/graphs/boxplot/interpret-the-results/key-results">Minitab® Support</a>.</p>
-<div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Exercise 1.2
-</div>
-</div>
-<div class="callout-body-container callout-body">
+</section>
+</section>
+</section>
+<section id="exercise-1.2" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="exercise-1.2"><span class="header-section-number">1.8</span> Exercise 1.2</h2>
 <p>1) The following sample data presents the thickness (Å) of a metal layer on 20 silicon wafers resulting from a chemical vapor deposition (CVD) process. Scientists believe that the thickness is usually normally distributed having a bell-shaped distribution for a smooth process. <strong>Construct</strong> a frequency histogram of metal thickness data. <strong>Conclude</strong> whether the process is smooth or not.</p>
 <blockquote class="blockquote">
 <p>468, 459, 450, 453, 473, 454, 458, 438, 447, 463,</p>
@@ -819,11 +815,10 @@ Figure&nbsp;1.5: Comparison of Catalyst Performance: Catalyst 1 vs.&nbsp;Catalys
 <p><strong>Construct</strong> a simple box-plot of yield strength. <strong>Find</strong> the value above which top 10% yield strength lie.</p>
 <p>6) The data are diameters (in mm) of holes in a group of 12 wing leading edge ribs for a commercial transport airplane:</p>
 <p>120.1, 120.2, 120.3, 120.4, 120.5, 120.5, 120.7, 120.8, 120.9, 120.9, 121.3, 121.1</p>
-<p><strong>Construct</strong>&nbsp;a box-plot and show outlier(s) if any. Comment about departure from symmetry of diameter of holes data.</p>
+<p><strong>Construct</strong> a box-plot and show outlier(s) if any. Comment about departure from symmetry of diameter of holes data.</p>
 <p>7) <strong>The Number of Breaks in Yarn during Weaving</strong> <span class="citation" data-cites="Tippett1950">(<a href="references.html#ref-Tippett1950" role="doc-biblioref">Tippett 1950</a>)</span></p>
 <p>This data set gives the number of warp breaks per loom, where a loom corresponds to a fixed length of yarn.</p>
-<p><strong>Format</strong></p>
-<p>A data frame with 54 observations on 3 variables.</p>
+<p><strong>Format:</strong> A data frame with 54 observations on 3 variables.</p>
 <table class="caption-top table">
 <tbody>
 <tr class="odd">
@@ -843,18 +838,21 @@ Figure&nbsp;1.5: Comparison of Catalyst Performance: Catalyst 1 vs.&nbsp;Catalys
 </tr>
 </tbody>
 </table>
-<p>There are measurements on 9 looms for each of the six types of warp (<code>AL</code>, <code>AM</code>, <code>AH</code>, <code>BL</code>, <code>BM</code>, <code>BH</code>).</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="1_intro_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<p>There are measurements on 9 looms for each of the six types of warp (<code>AL</code>, <code>AM</code>, <code>AH</code>, <code>BL</code>, <code>BM</code>, <code>BH</code>). A comparative boxplot is shown in <a href="#fig-breaks" class="quarto-xref">Figure&nbsp;<span>1.6</span></a>.</p>
 <p>a) <strong>Describe</strong> which wool is better.</p>
 <p>b) <strong>Describe</strong> which tension is better.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-breaks" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-breaks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1_intro_files/figure-html/fig-breaks-1.png" id="fig-breaks" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-breaks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.6
+</figcaption>
+</figure>
+</div>
 </div>
 </div>
 
@@ -870,8 +868,6 @@ Montgomery, Douglas C., and George C. Runger. 2014. <em>Applied Statistics and P
 Tippett, L. H. C. 1950. <em>Technological Applications of Statistics</em>. New York: Wiley.
 </div>
 </div>
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
