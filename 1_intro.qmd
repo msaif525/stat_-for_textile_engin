@@ -485,10 +485,13 @@ Box plots are very useful in graphical comparisons among data sets because they 
 
 **Example:** Two catalysts are being analyzed to determine how they affect the mean yield of a chemical process. Specifically, catalyst 1 is currently used; but catalyst 2 is acceptable. Because catalyst 2 is cheaper, it should be adopted, if it does not change the process yield. A test is run in the pilot plant and results in the data shown below [@montgomery2014, page 384].
 
-| Observation Number |   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |
-|:-------------------|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
++--------------------+-------+-------+-------+-------+-------+-------+-------+-------+
+| Observation Number | 1     | 2     | 3     | 4     | 5     | 6     | 7     | 8     |
++:===================+:=====:+:=====:+:=====:+:=====:+:=====:+:=====:+:=====:+:=====:+
 | **Catalyst 1**     | 91.50 | 94.18 | 92.18 | 95.39 | 91.79 | 89.07 | 94.72 | 89.21 |
++--------------------+-------+-------+-------+-------+-------+-------+-------+-------+
 | **Catalyst 2**     | 89.19 | 90.95 | 90.46 | 93.21 | 97.19 | 97.04 | 91.07 | 92.75 |
++--------------------+-------+-------+-------+-------+-------+-------+-------+-------+
 
 : Performance Values for Catalyst 1 and Catalyst 2
 
@@ -523,7 +526,6 @@ Though the **median** yields are same for both catalysts but Catalyst 2 produces
 
 **NOTE:** To know more about box-plot please visit [Minitab® Support](https://support.minitab.com/en-us/minitab/help-and-how-to/graphs/boxplot/interpret-the-results/key-results).
 
-::: {.callout-note appearance="simple"}
 ## Exercise 1.2
 
 1\) The following sample data presents the thickness (Å) of a metal layer on 20 silicon wafers resulting from a chemical vapor deposition (CVD) process. Scientists believe that the thickness is usually normally distributed having a bell-shaped distribution for a smooth process. **Construct** a frequency histogram of metal thickness data. **Conclude** whether the process is smooth or not.
@@ -568,7 +570,7 @@ iii) **Construct** a box-plot, **show** the outliers and **comment** about the s
 
 120.1, 120.2, 120.3, 120.4, 120.5, 120.5, 120.7, 120.8, 120.9, 120.9, 121.3, 121.1
 
-**Construct** a box-plot and show outlier(s) if any. Comment about departure from symmetry of diameter of holes data.
+**Construct** a box-plot and show outlier(s) if any. Comment about departure from symmetry of diameter of holes data.
 
 7\) **The Number of Breaks in Yarn during Weaving** [@Tippett1950]
 
@@ -584,16 +586,16 @@ A data frame with 54 observations on 3 variables.
 | `wool`    | factor  | The type of wool (A or B)      |
 | `tension` | factor  | The level of tension (L, M, H) |
 
-There are measurements on 9 looms for each of the six types of warp (`AL`, `AM`, `AH`, `BL`, `BM`, `BH`).
+There are measurements on 9 looms for each of the six types of warp (`AL`, `AM`, `AH`, `BL`, `BM`, `BH`). A comparative boxplot is shown in @fig-breaks.
+
+a\) **Describe** which wool is better.
+
+b\) **Describe** which tension is better.
 
 ```{r}
+#| label: fig-breaks
 par(mfrow=c(1,2))
 boxplot(breaks~wool, data=warpbreaks)
 boxplot(breaks~tension, data=warpbreaks)
 
 ```
-
-a\) **Describe** which wool is better.
-
-b\) **Describe** which tension is better.
-:::
