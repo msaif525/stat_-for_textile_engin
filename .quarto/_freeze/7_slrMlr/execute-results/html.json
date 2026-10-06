@@ -1,0 +1,15 @@
+{
+  "hash": "4b2f64638db5dfe3d841aa9ad73da175",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Regression Analysis\n\n## SLR\n\n::: callout-important\n## Summary of Simple Linear Regression (SLR)\n\n**1) The PRF :** $y_i =\\alpha +\\beta x_i +\\epsilon_i$\n\n**2) The OLS estimates of** $\\alpha$ **and** $\\beta$ **are:**\n\n$$a=\\bar y-b \\bar x$$\n\n$$b=\\frac{n\\sum xy-(\\sum x)(\\sum y)}{n\\sum x^2 -(\\sum x)^2}$$\n\nrespectively.\n\nHence the **estimated regression line** is:\\\n\n$$\\hat y_i =a+bx$$\n\n**3) Point prediction:** For a given value of $X$ say $x_g$ the predicted value of $Y$ is:\n\n$$\\hat y_g=a+b *(x_g)$$\n\n**4) Goodness of fit for SLR:**\n\n$$R^2=\\frac{b^2(\\sum x^2 -n \\  \\bar x^2)}{\\sum y^2 -n \\ \\ \\bar y^2}\\ \\ ; \\ \\ 0\\le R^2\\le 1$$\n\n**5) Mean squared error (MSE): as an estimate of** $\\sigma_e^2$:\n\n$$s_e^2=\\frac{\\sum_{i=1}^{n} (y_i -\\hat y_i)^2}{n-2}$$\n\n**6) Hypothesis test for** $\\beta$**:**\n\n$$H_0: \\beta =c \\ \\ vs.$$\n\n$$H_1: \\beta \\ne c$$\n\nTest statistic:\n\n$$t_0=\\frac{b-c}{s.e(b)}$$\n\nwhere, $s.e(b)=\\frac{s_e}{\\sqrt {\\sum (x-\\bar x)^2}}$\n\nUnder $H_0$, $t_0$ follows *T*-*distribution with* $n-2$ df.\n:::\n\n**Problem 7.1 [@walpole2017,pp.399]:** The following is a portion of a classic data set called the “pilot plot data” in Fitting Equations to Data by Daniel and Wood, published in 1971. The response y is the acid content of material produced by titration, whereas the regressor x is the organic acid content produced by extraction and weighing.\\\n\n|       |     |     |     |     |     |     |     |     |     |     |\n|:-----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|\n| **y** | 76  | 62  | 66  | 58  | 88  | 70  | 37  | 82  | 88  | 43  |\n| **x** | 123 | 55  | 100 | 75  | 159 | 109 | 48  | 138 | 164 | 28  |\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n\n:::\n\n\n## MLR\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

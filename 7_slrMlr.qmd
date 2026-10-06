@@ -1,0 +1,107 @@
+# Regression Analysis
+
+## SLR
+
+::: callout-important
+## Summary of Simple Linear Regression (SLR)
+
+**1) The PRF :** $y_i =\alpha +\beta x_i +\epsilon_i$
+
+**2) The OLS estimates of** $\alpha$ **and** $\beta$ **are:**
+
+$$a=\bar y-b \bar x$$
+
+$$b=\frac{n\sum xy-(\sum x)(\sum y)}{n\sum x^2 -(\sum x)^2}$$
+
+respectively.
+
+Hence the **estimated regression line** is:\
+
+$$\hat y_i =a+bx$$
+
+**3) Point prediction:** For a given value of $X$ say $x_g$ the predicted value of $Y$ is:
+
+$$\hat y_g=a+b *(x_g)$$
+
+**4) Goodness of fit for SLR:**
+
+$$R^2=\frac{b^2(\sum x^2 -n \  \bar x^2)}{\sum y^2 -n \ \ \bar y^2}\ \ ; \ \ 0\le R^2\le 1$$
+
+**5) Mean squared error (MSE): as an estimate of** $\sigma_e^2$:
+
+$$s_e^2=\frac{\sum_{i=1}^{n} (y_i -\hat y_i)^2}{n-2}$$
+
+**6) Hypothesis test for** $\beta$**:**
+
+$$H_0: \beta =c \ \ vs.$$
+
+$$H_1: \beta \ne c$$
+
+Test statistic:
+
+$$t_0=\frac{b-c}{s.e(b)}$$
+
+where, $s.e(b)=\frac{s_e}{\sqrt {\sum (x-\bar x)^2}}$
+
+Under $H_0$, $t_0$ follows *T*-*distribution with* $n-2$ df.
+:::
+
+**Problem 7.1 [@walpole2017,pp.399]:** The following is a portion of a classic data set called the “pilot plot data” in Fitting Equations to Data by Daniel and Wood, published in 1971. The response y is the acid content of material produced by titration, whereas the regressor x is the organic acid content produced by extraction and weighing.\
+
+|       |     |     |     |     |     |     |     |     |     |     |
+|:-----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **y** | 76  | 62  | 66  | 58  | 88  | 70  | 37  | 82  | 88  | 43  |
+| **x** | 123 | 55  | 100 | 75  | 159 | 109 | 48  | 138 | 164 | 28  |
+
+```{r}
+# Define the function
+get_slr_stats <- function(x, y) {
+  # Basic counts and sums
+  n <- length(x)
+  sum_x <- sum(x)
+  sum_y <- sum(y)
+  sum_x2 <- sum(x^2)
+  sum_y2 <- sum(y^2)
+  sum_xy <- sum(x * y)
+  
+  
+  x_bar <- mean(x)
+  y_bar <- mean(y)
+  
+  slope <- (n * sum_xy - (sum_x * sum_y)) / (n * sum_x2 - (sum_x^2))
+  
+  intercept <- y_bar - (slope * x_bar)
+  
+  # Return results as a named list
+  return(list(
+    n = n,
+    sum_x = sum_x,
+    sum_y = sum_y,
+    sum_x2 = sum_x2,
+    sum_y2 = sum_y2,
+    sum_xy = sum_xy,
+    x_bar = x_bar,
+    y_bar = y_bar,
+    intercept = intercept,
+    slope = slope
+  ))
+}
+```
+
+```{r}
+# Creating the data frame
+df <- data.frame(
+  y = c(76, 62, 66, 58, 88, 70, 37, 82, 88, 43),
+  x = c(123, 55, 100, 75, 159, 109, 48, 138, 164, 28)
+)
+
+# Display the data frame
+#print(df)
+stats <- get_slr_stats(df$x, df$y)
+#print(stats)
+
+#summary(lm(df$y~df$x))
+
+```
+
+## MLR

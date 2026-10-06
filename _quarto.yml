@@ -1,0 +1,54 @@
+project:
+  type: book
+
+book:
+  title: "Statistics For Textile Engineering"
+  author: "Mohammad Saifuddin, Assistant Professor"
+  date: today
+  downloads: [pdf, epub]
+  chapters:
+    - index.qmd
+    - 1_intro.qmd
+    - 2_probablity.qmd
+    - 3_randomVar_discrete.qmd
+    - 4_continuousVarNormal.qmd
+    - 5_estimation_smplDist.qmd
+    - 6_significanceTest.qmd
+    - 7_slrMlr.qmd
+    - 8_doe.qmd
+    - 9_sqc.qmd
+    - summary.qmd
+    - references.qmd
+
+
+
+bibliography: references.bib
+
+
+execute:
+  echo: false     # Hide code
+  warning: false  # Hide warnings
+  message: false  # Hide loading messages
+  
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+    include-in-header: footer.tex
+    geometry:
+      - top=20mm
+      - bottom=25mm
+      - left=25mm
+      - right=25mm
+      - heightrounded
+    toc: true
+    toc-depth: 5
+    colorlinks: true
+    fontsize: 11pt
+
+
+

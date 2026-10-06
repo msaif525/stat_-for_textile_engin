@@ -1,0 +1,51 @@
+# Estimation and Sampling Distribution
+
+## Introduction
+
+Estimation refers to finding the value of an unknown *population parameter* based on the sample selected from that population. Estimations are of two types- (i) Point estimation (ii) Interval estimation. First we discuss about point estimation, then sampling distribution of point estimators which will be needed to understand interval estimation.
+
+### Point Estimation
+
+Point estimation involves **sample statistic**(*any function of the observations in a random sample*) , a formula or function of sample statistics (*point estimator*) and **estimate** (*the numerical value of the point estimator*).
+
+For example, suppose we draw a random sample say $x_1,x_2,...,x_n$ from a population regarding a variable $X$. Here
+
+-   Parameter of interest: Population mean, $\mu$
+
+-   Point estimator of $\mu$ : Sample mean $\bar X=\frac{\sum x}{n}$
+
+If the we have a sample of size $n=4$ and the values are: $x_1=25, x_2=30,x_3=29, x_4=31$ , then the point estimate of $\mu$ is:
+
+$$
+\bar x=\frac{25+30+29+31}{4}=28.75
+$$
+
+Another important population parameter is population variance, $\sigma^2$. And its point estimator is $S^2=\frac{\sum_{i=1}^n (x_i-\bar X)^2}{n-1}$
+
+**Note:** Due to sampling variability **point estimators** are random variables.
+
+## Sampling distribution
+
+::: {.callout-important appearance="simple"}
+## Theorem 5.1: Central Limit Theorem
+:::
+
+::: callout-note
+## Theorem 5.2
+
+Let $X_1, X_2, \dots, X_n$ be independent random variables that are all normal with mean $\mu$ and standard deviation $\sigma$. Let
+
+$$
+\bar{X} = \frac{1}{n} \sum_{i=1}^{n} X_i \quad \text{and} \quad S^2 = \frac{1}{n-1} \sum_{i=1}^{n} (X_i - \bar{X})^2.
+$$
+
+Then the random variable $T = \frac{\bar{X} - \mu}{S/\sqrt{n}}$ has a $t$-distribution with $v = n - 1$ degrees of freedom.
+:::
+
+## Interval estimation
+
+### Interval estimation for $\mu$ (when $\sigma$ is known)
+
+### Interval estimation for $\mu$ (when $\sigma$ is Unknown)
+
+### Interval estimation for $\mu$ in case of Large Sample

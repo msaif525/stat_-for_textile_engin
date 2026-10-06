@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Discrete Probability Distributions – Statistics For Textile Engineering</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./4_continuousVarNormal.html" rel="next">
+<link href="./2_probablity.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3_randomVar_discrete.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Discrete Probability Distributions</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Statistics For Textile Engineering</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./Statistics-For-Textile-Engineering.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./Statistics-For-Textile-Engineering.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Statistics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_probablity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probability and Random Variables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./3_randomVar_discrete.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Discrete Probability Distributions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./4_continuousVarNormal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Continuous r.v and probability density function</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./5_estimation_smplDist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Estimation and Sampling Distribution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./6_significanceTest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Significance test: Statistical Hypothesis Testing</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./7_slrMlr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Regression Analysis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./8_doe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">DoE</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./9_sqc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Statistical Quality Control</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#probability-distribution-of-discrete-r.v-probability-mass-function-pmf" id="toc-probability-distribution-of-discrete-r.v-probability-mass-function-pmf" class="nav-link active" data-scroll-target="#probability-distribution-of-discrete-r.v-probability-mass-function-pmf"><span class="header-section-number">3.1</span> Probability distribution of Discrete r.v: Probability mass function (PMF)</a></li>
+  <li><a href="#mean-variance-and-standard-deviation-of-discrete-r.v" id="toc-mean-variance-and-standard-deviation-of-discrete-r.v" class="nav-link" data-scroll-target="#mean-variance-and-standard-deviation-of-discrete-r.v"><span class="header-section-number">3.2</span> Mean, Variance and Standard deviation of discrete r.v</a></li>
+  <li><a href="#properties-of-e.-and-var." id="toc-properties-of-e.-and-var." class="nav-link" data-scroll-target="#properties-of-e.-and-var."><span class="header-section-number">3.3</span> Properties of E(.) and Var(.)</a></li>
+  <li><a href="#binomial-distribution" id="toc-binomial-distribution" class="nav-link" data-scroll-target="#binomial-distribution"><span class="header-section-number">3.4</span> Binomial distribution</a></li>
+  <li><a href="#poisson-distribution" id="toc-poisson-distribution" class="nav-link" data-scroll-target="#poisson-distribution"><span class="header-section-number">3.5</span> Poisson distribution</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Discrete Probability Distributions</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="probability-distribution-of-discrete-r.v-probability-mass-function-pmf" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="probability-distribution-of-discrete-r.v-probability-mass-function-pmf"><span class="header-section-number">3.1</span> Probability distribution of Discrete r.v: Probability mass function (PMF)</h2>
+<p>Suppose <span class="math inline">\(X\)</span> is a discrete random variable. The <strong>probability mass function (PMF)</strong> of <span class="math inline">\(X\)</span> can be denoted as <span class="math inline">\(f(x)\)</span> where</p>
+<p><span class="math display">\[ f(x)=P(X=x) \]</span>For each possible outcome <span class="math inline">\(x\)</span> ; <span class="math inline">\(f(x)\)</span> must satisfies:</p>
+<ol type="1">
+<li><p><span class="math display">\[f(x) \ge 0\]</span></p></li>
+<li><p><span class="math display">\[\sum _x f(x)=1\]</span></p></li>
+</ol>
+<p>The <strong>PMF</strong> <span class="math inline">\(f(x)\)</span> is also called probability distribution of the discrte random variable <span class="math inline">\(X\)</span>.</p>
+</section>
+<section id="mean-variance-and-standard-deviation-of-discrete-r.v" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="mean-variance-and-standard-deviation-of-discrete-r.v"><span class="header-section-number">3.2</span> Mean, Variance and Standard deviation of discrete r.v</h2>
+<p>(a) The <strong>expected value of</strong> <span class="math inline">\(X\)</span> the mean of <span class="math inline">\(X\)</span> is denoted by <span class="math inline">\(E(X)\)</span> and defined by:</p>
+<p><span id="eq-EX"><span class="math display">\[ E(X)=\sum_x x.f(x)  \tag{3.1}\]</span></span></p>
+<p>The expected value of <span class="math inline">\(X\)</span> is sometimes called the population mean of <span class="math inline">\(X\)</span> that is <span class="math inline">\(\mu=E(X)\)</span>.</p>
+<p>(b) The <strong>variance</strong> of <span class="math inline">\(X\)</span> is</p>
+<p><span class="math display">\[Var(X)=\sigma^2 =E[(X-\mu)^2]=\sum_x (x-\mu)^2 f(x)\]</span><strong>Alternative:</strong></p>
+<p><span id="eq-VarX"><span class="math display">\[Var (X)=E(X^2)-\mu^2 \tag{3.2}\]</span></span> Where,</p>
+<p><span class="math display">\[E(X^2)=\sum_{x} x^2.f(x)\]</span></p>
+<p><strong>Problem 3.1:</strong> Consider the following probability distribution of discrete r.v <span class="math inline">\(X\)</span>.</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x\)</span></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f(x)\)</span></td>
+<td style="text-align: center;">0.25</td>
+<td style="text-align: center;">0.40</td>
+<td style="text-align: center;">0.35</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compute</strong> <span class="math inline">\(E(X)\)</span>, <span class="math inline">\(Var(X)\)</span> and <span class="math inline">\(SD(X)\)</span>.</p>
+<p><em>Solution:</em></p>
+<p><strong>Mean or Expected value of</strong> <span class="math inline">\(X\)</span>:<br>
+<span class="math display">\[
+\mu= E(X)=\sum _{x=1}^3 x\cdot f(x)=1\times 0.25+2\times 0.40+3\times 0.35=2.1
+\]</span></p>
+<p><strong>Variance of</strong> <span class="math inline">\(X\)</span>: <span class="math display">\[
+\sigma^2 =E(X^2)-\mu^2=\sum_{x=0}^3 x^2 \cdot f(x)-\mu^2
+\]</span></p>
+<p><span class="math display">\[
+=[1^2 \times0.25+2^2\times 0.40+3^2\times 0.35]-(2.1)^2=5-4.41=0.59
+\]</span></p>
+<p><strong>Standard deviation of</strong> <span class="math inline">\(X\)</span>:</p>
+<p><span class="math inline">\(SD(X)=\sigma =\sqrt {0.59}=0.7681\)</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-xdist" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-xdist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="3_randomVar_discrete_files/figure-html/fig-xdist-1.png" class="img-fluid figure-img" width="240">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-xdist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Probability histogram of of X (Example 3.1)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Note:</strong> <span class="math inline">\(E(X)\)</span> measures the <strong>center</strong> of the distribution and <span class="math inline">\(SD(X)\)</span> measures the <strong>spread</strong> of the distribution around the mean.</p>
+</section>
+<section id="properties-of-e.-and-var." class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="properties-of-e.-and-var."><span class="header-section-number">3.3</span> Properties of E(.) and Var(.)</h2>
+<p>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants, then</p>
+<p>a) <span class="math inline">\(E(b)=b\)</span></p>
+<p>b) <span class="math inline">\(E(aX+b)=aE(X)+b\)</span></p>
+<p>c) <span class="math inline">\(Var(b)=0\)</span></p>
+<p>d) <span class="math inline">\(Var(aX+b)=a^2 \ \ Var (X)\)</span></p>
+<p><strong>Exercises 3.1 :</strong></p>
+<ol type="1">
+<li>Let the random variable <span class="math inline">\(X\)</span> represent the number of defective parts for a machine when 3 parts are sampled from a production line and tested. The following is the probability distribution of <span class="math inline">\(X\)</span>.</li>
+</ol>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(x\)</span></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(f(x)\)</span></td>
+<td style="text-align: center;">0.51</td>
+<td style="text-align: center;">0.38</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.01</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Calculate</strong> average and standard deviation of number of defective parts.</p>
+<ol start="2" type="1">
+<li><p>A chemical supply company ships a certain solvent in 10-gallon drums. Let X represent the number of drums ordered by a randomly chosen customer. Assume X has the following probability mass function:</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(x\)</span></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(f(x)\)</span></td>
+<td style="text-align: center;">0.4</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">0.1</td>
+<td style="text-align: center;">0.1</td>
+</tr>
+</tbody>
+</table>
+<p>a. <strong>Find</strong> the mean number of drums ordered.</p>
+<p>b. <strong>Find</strong> the variance of the number of drums ordered.</p>
+<p>c. <strong>Find</strong> the standard deviation of the number of drums ordered.</p>
+<p>d. Let Y be the number of gallons ordered. Find the probability mass function of Y .</p>
+<p>e. <strong>Find</strong> the mean number of gallons ordered.</p>
+<p>f. <strong>Find</strong> the variance of the number of gallons ordered.</p>
+<p>g. <strong>Find</strong> the standard deviation of the number of gallons ordered.<br>
+</p></li>
+</ol>
+</section>
+<section id="binomial-distribution" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="binomial-distribution"><span class="header-section-number">3.4</span> Binomial distribution</h2>
+<p>Let <span class="math inline">\(X\)</span> be the number of “successes” in <span class="math inline">\(n\)</span> independent <strong>Bernoulli trial (</strong>a trial which has TWO outcomes-<em>success or failure</em><strong>).</strong></p>
+<p>Assume <span class="math inline">\(Pr(success)=p \ \ (say)\)</span> remains constant from trial to trial. Then the PMF of <span class="math inline">\(X\)</span> is:</p>
+<p><strong>PMF:</strong></p>
+<p><span class="math display">\[
+P(X=x)=f(x)=\binom{n}{x}p^x (1-p)^{n-x} \ \ ; \ \ x=0,1,...,n
+\]</span></p>
+<p>We often use <span class="math inline">\(q=1-p\)</span>.</p>
+<p>With,</p>
+<ul>
+<li><p><span class="math inline">\(\sum_{x=0}^n f(x)=1\)</span></p></li>
+<li><p><strong>Mean:</strong> <span class="math inline">\(\mu=E(X)=np\)</span></p></li>
+<li><p><strong>Variance:</strong> <span class="math inline">\(\sigma^2=npq=np(1-p)\)</span></p></li>
+</ul>
+<p><strong>Example:</strong> For <span class="math inline">\(n=3\)</span> and <span class="math inline">\(p=0.60\)</span> the binomial probabilities are:</p>
+<p><span class="math inline">\(P(X=0)=f(0)=\binom{3}{0}(0.60)^0 (0.40)^{3-0}=0.064\)</span></p>
+<p><span class="math inline">\(P(X=1)=f(1)=\binom{3}{1}(0.60)^1 (0.40)^{3-1}=0.288\)</span></p>
+<p><span class="math inline">\(P(X=2)=f(2)=\binom{3}{2}(0.60)^2 (0.40)^{3-2}=0.432\)</span></p>
+<p><span class="math inline">\(P(X=3)=f(3)=\binom{3}{3}(0.60)^3 (0.40)^{3-3}=0.216\)</span></p>
+<p>AND,</p>
+<p><span class="math display">\[
+\mathrm{Mean} , \mu=E(X)=np=3\times 0.6=1.8
+\]</span></p>
+<p><span class="math display">\[
+\mathrm{Variance} , \sigma^2 =npq=3\times0.60\times0.40=0.72
+\]</span></p>
+<p><span class="math display">\[
+SD(X), \sigma =\sqrt {0.72} \approx 0.85
+\]</span></p>
+<p><strong>Problem 3.2:</strong> Let <span class="math inline">\(X \sim \text{Bin}(8, 0.4)\)</span>. <strong>Find</strong></p>
+<ol type="a">
+<li><span class="math inline">\(P(X = 2)\)</span></li>
+<li><span class="math inline">\(P(X = 4)\)</span></li>
+<li><span class="math inline">\(P(X &lt; 2)\)</span></li>
+<li><span class="math inline">\(P(X &gt; 6)\)</span></li>
+<li><span class="math inline">\(\mu_X\)</span></li>
+<li><span class="math inline">\(\sigma_X^2\)</span></li>
+</ol>
+<p><strong>Problem 3.3:</strong> A large industrial firm allows a discount on any invoice that is paid within 30 days. Of all invoices, 10% receive the discount. In a company audit, 12 invoices are sampled at random.</p>
+<p>(a). What is the probability that fewer than 4 of the 12 sampled invoices receive the discount?</p>
+<p>(b). What is the probability that more than 1 of the 12 sampled invoices receives a discount?</p>
+<p><strong>Problem 3.4:</strong> Of all the weld failures in a certain assembly, 85% of them occur in the weld metal itself, and the remaining 15% occur in the base metal. A sample of 20 weld failures is examined.</p>
+<p>(a). What is the probability that exactly five of them are base metal failures?</p>
+<p>(b). What is the probability that fewer than four of them are base metal failures?</p>
+<p>(c). What is the probability that none of them are base metal failures?</p>
+<p><strong>Problem 3.5:</strong> Of the items manufactured by a certain process, 20% are defective. Of the defective items, 60% can be repaired.</p>
+<p>(a). <strong>Find</strong> the probability that a randomly chosen item is defective and cannot be repaired.</p>
+<p>(b). <strong>Find</strong> the probability that exactly 2 of 20 randomly chosen items are defective and cannot be repaired.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Distribution of sample proportion (<span class="math inline">\(\hat p\)</span>)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In many situations the success probability <span class="math inline">\(p\)</span> associated with a certain Bernoulli trial remains unknown, and we have to estimate its value. A simple way to do this is to conduct n independent trials and count the number <span class="math inline">\(X\)</span> of successes. To estimate the success probability <span class="math inline">\(p\)</span> we compute the sample proportion <span class="math inline">\(\hat p\)</span>.</p>
+<p><span class="math display">\[
+\hat p=\frac{\mathrm{number \ \ of \  \ successes}}{\mathrm{number \ \ of \ \ trials}}=\frac{X}{n}
+\]</span> So,</p>
+<ul>
+<li><p><span class="math inline">\(E(\hat p)=p\)</span></p></li>
+<li><p><span class="math inline">\(Var(\hat p)=\frac{p(1-p)}{n}\)</span></p></li>
+<li><p><span class="math inline">\(SD(\hat p)=\sqrt{\frac{p(1-p)}{n}}\)</span><br>
+</p>
+<p>We will use this concept in upcoming Chapter of <strong>Statistical Quality Control (SQC)</strong> for control charts of <strong>Fraction-Defective.</strong></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="poisson-distribution" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="poisson-distribution"><span class="header-section-number">3.5</span> Poisson distribution</h2>
+<p>Suppose <span class="math inline">\(X\)</span> be the number occurrences in a given <strong>interval</strong> and</p>
+<p><span class="math inline">\(\mu\)</span> is the expected value or mean number of occurrences/rate of occurrences in an interval. Then PMF of <span class="math inline">\(X\)</span> is:</p>
+<p><strong>PMF:</strong></p>
+<p><span class="math display">\[
+P(X=x)=\frac{e^{-\mu}\mu^x}{x!} \ \ ; \ \ x=0,1,...,\infty
+\]</span></p>
+<p>With,</p>
+<ul>
+<li><p><span class="math inline">\(\sum_{x=0}^{\infty} f(x)=1\)</span></p></li>
+<li><p>Mean, <span class="math inline">\(E(X)=\mu\)</span></p></li>
+<li><p>Variance, <span class="math inline">\(Var(X)=\sigma^2=\mu\)</span></p></li>
+</ul>
+<p><u>We write,</u> <span class="math inline">\(X\sim Pois(\mu)\)</span></p>
+<p><strong>Problem 3.6:</strong> Let <span class="math inline">\(X \sim Pois(4)\)</span>. Find</p>
+<p>a. P(X = 1)</p>
+<p>b. P(X = 0)</p>
+<p>c. P(X &lt; 2)</p>
+<p>d. P(X &gt; 1)</p>
+<p>e. <span class="math inline">\(\mu_X\)</span></p>
+<p>f. <span class="math inline">\(\sigma_X\)</span></p>
+<p><strong>Problem 3.7:</strong> A local drugstore owner knows that, on average, 100 people enter his store each hour.</p>
+<p>(a) <strong>Find</strong> the probability that in a given 3-minute period nobody enters the store.</p>
+<p>(b) <strong>Find</strong> the probability that in a given 5-minute period more than 2 people enter the store.</p>
+<p><strong>Problem 3.8:</strong> While inspecting a fabric in a continuous roll, the mean number of defects per meter is 0.25. <strong>Determine</strong> the probability that 10 m length of fabric will contain (a) 0, (b) 1, (c) 2, (d) less than or equal to 2 defects.</p>
+<p><strong>Problem 3.9:</strong> A roll of fabric contains on an average 5 defects scattered at random in 100 <span class="math inline">\(m^2\)</span>. Pieces of fabric, 5 m by 2 m, are cut from the roll. Determine the probability that</p>
+<p>(a) a piece contains no defects;</p>
+<p>(b) a piece will contain more than one defects;</p>
+<p>(c) a piece will contain fewer than two defects;</p>
+<p>(d) five pieces selected at random will all be free from defects.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./2_probablity.html" class="pagination-link" aria-label="Probability and Random Variables">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probability and Random Variables</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./4_continuousVarNormal.html" class="pagination-link" aria-label="Continuous r.v and probability density function">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Continuous r.v and probability density function</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

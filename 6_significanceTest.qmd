@@ -1,0 +1,208 @@
+# Significance test: Statistical Hypothesis Testing
+
+## **Definition Statistical Hypothesis**
+
+A statistical hypothesis is a *statement* about the *parameters* of one or more populations.
+
+**Example 1:** A manufacturer claims that the mean life of a smartphone is more than 1.5 years.
+
+**Example 2:** A local courier service claims that they deliver a ordered product within 30 minutes on average.
+
+**Example 3:** A sports drink maker claims that the mean calorie content of its beverages is 72 calories per serving.
+
+## Types of hypothesis
+
+Statistical hypothesis are stated in two forms- (i) Null hypothesis ($H_0$) and (ii) Alternative hypothesis ($H_1$).
+
+Both null and alternative hypothesis are the written about the parameter of interest based on the claim.
+
+- We will always state the null hypothesis as an **equality claim**.
+
+- However, when the alternative hypothesis is stated with the **"\< "** sign, the implicit claim in the null hypothesis can be taken as **" ≥ "** or **"="** sign.
+
+- When the alternative hypothesis is stated with the **"\>"** sign, the implicit claim in the null hypothesis can be taken as **"≤"** or **"="** sign.
+
+## Developing hypotheses
+
+To develop or state null and alternative hypothesis, at first we have to clearly identify the **"claim"** about population parameter. Now we will see some examples.
+
+**Example 1:** A manufacturer claims that the mean life of a smartphone is more than 1.5 years.
+
+**Hypothesis:**
+
+::: text-center
+$H_0:\mu=1.5$
+
+$\ \ \ \ \ \ \ \ \ \ \ \ \ \  H_1: \mu>1.5 \ \ (claim)$
+:::
+
+**Example 2:** A local courier service claims that they deliver a ordered product within 30 minutes on average.
+
+**Hypothesis:**
+
+::: text-center
+$H_0: \mu=30$
+
+$\ \ \ \ \ \ \ \ \ \ \ \ \ \ H_1: \mu<30 \ \ (claim)$
+:::
+
+**Example 3:** A sports drink maker claims that the mean calorie content of its beverages is 72 calories per serving.
+
+**Hypothesis:**
+
+::: text-center
+$\ \ \ \ \ \ \ \ \ \ \ \ \ \ H_0: \mu=72 \ \ (claim)$
+
+$H_1: \mu \ne 72$
+:::
+
+## Types of test based on alternative hypothesis $H_1$
+
+- $H_1: \mu< \mu_0$ (Lower tailed)
+
+- $H_1: \mu> \mu_0$ (Upper tailed)
+
+- $H_1: \mu \ne \mu_0$ (Two-tailed)
+
+## Types of error in hypothesis test and P-value
+
+While testing a statistical hypothesis concerning population parameter we commit two types of errors.
+
+- **Type I error** occurs when we **reject** a **TRUE** $H_0$
+
+- **Type II error** occurs when we **FAIL to reject** a **FALSE** $H_0$
+
+- The **Level of significance** is the probability of comiting **Type** **I error**. It is denoted by $\alpha$.
+
+$$\alpha= P(Type \ \ I \ \ error)$$
+
+- The probability of committing a **Type II error**, denoted by $\beta$.
+
+$$\beta =P(Type \ \ II \ \ error)$$
+
+::: callout-important
+## Note
+
+**Type I** **error** is more serious than **Type II** error. Because rejecting a TRUE statement is more devastating than FAIL to reject a FALSE statement. So, we always try to keep our probability of Type I error as small as possible (1% or at most 5%). For more detail see [@keller2014].
+:::
+
+- **P-value:** If the null hypothesis is true, then a P-value (or probability value) of a hypothesis test is the probability of obtaining a sample statistic with a value as extreme or more extreme than the one determined from the sample data.
+
+  The smaller the P-value of the test, the more evidence there is to reject the null hypothesis. A very small P-value indicates an unusual event
+
+::: callout-important
+## P-value Explanation
+
+A hypothesis test functions like a **legal trial**. You start by assuming the **null hypothesis (**$H_0$) is true, just as a jury assumes *a defendant is innocent until proven guilty.*
+
+The data you collect acts as the evidence. By comparing this evidence to your initial assumption, you calculate a **p-value** (ranging from 0 to 1), which quantifies how well the sample data "fits" with $H_0$.
+
+- **A high p-value** suggests the evidence is consistent with the null hypothesis.
+
+- **A low p-value** indicates a sharp disagreement between the data and the null hypothesis.
+
+When the p-value is small enough, it provides "beyond a reasonable doubt" proof that the initial assumption is unlikely. At this point, you **reject the null hypothesis** and shift your belief to the **alternative hypothesis (**$H_1$).
+:::
+
+**So, how these hypotheses will be tested?**
+
+To test a hypothesis we have to determine
+
+- a **test-statistic**; and
+
+- **Critical/Rejection region** based on the sampling distribution of test-statistic for a given $\alpha$ ;
+
+- If the value of test-statistic **falls** in **Critical/Rejection region**, then we reject Null ($H_0$) hypothesis; otherwise not. Or,
+
+- If **P-value**$\le\alpha$ then we reject Null ($H_0$) hypothesis.
+
+## Hypothesis testing concerning population mean ($\mu$)
+
+The following two hypotheses tests are used concerning population mean ($\mu$):
+
+1\. One sample z-test (with known $\sigma$ )
+
+2\. One sample t-test (with unknown $\sigma$)\
+
+### One sample z-test
+
+When sampling is from a **normally distributed population** or **sample size is sufficiently large** and t**he population variance is known**, the test statistic for testing $H_0: \mu=\mu_0$ at $\alpha$ is
+
+$$z_0=\frac{\bar x-\mu_0}{\sigma /\sqrt n}$$
+
+**Decision (Critical value approach):** If calculated $z$ falls in rejection region (CR) , then reject $H_0$ . Otherwise, do not reject $H_0$.
+
+- For lower tailed test, reject $H_0$ if $z_0<-z_\alpha$ ;
+
+- For upper tailed test, reject $H_0$ if $z_0> z_\alpha$ ;
+
+- For two-tailed test, reject $H_0$ if $z_0<-z_{\alpha/2}$ or $z_0>z_{\alpha/2}$ .
+
+**NB:** Since $z$-distribution is symmetric about 0 so, a shortcut technique in CR/RR approach is:
+
+- Reject $H_0$ if $|z_{0}|>|z_{c}|$ ; otherwise do not.
+
+**Decision (P-value approach)**
+
++-----------------------------------+----------------------------------------+--------------+
+| Alternative hypothesis            | $P$-value                              | Calculator   |
+|                                   |                                        |              |
+|                                   |                                        | function     |
++===================================+========================================+==============+
+| $H_1: \mu <\mu_0$ (Left Tailed)   | Area in left tail $=P(Z<z_0)$          | $P(z_0)$     |
++-----------------------------------+----------------------------------------+--------------+
+| $H_1: \mu>\mu_0$ (Right Tailed)   | Area in right tail $=P(Z>z_0)$         | $R(z_0)$     |
++-----------------------------------+----------------------------------------+--------------+
+| $H_1: \mu \ne \mu_0$ (Two-tailed) | **Area in both tails=** $2P(Z<-|z_0|)$ | $2P(-|z_0|)$ |
+|                                   |                                        |              |
+|                                   | OR,                                    | OR,          |
+|                                   |                                        |              |
+|                                   | $2P(Z>|z_0|)$                          | $2R(|z_0|)$  |
++-----------------------------------+----------------------------------------+--------------+
+
+: P-value for $z$-statistic
+
+**Problem 6.1:** A new concrete mix is being designed to provide adequate compressive strength for concrete blocks. The specification for a particular application calls for the blocks to have a mean compressive strength $\mu$ greater than 1350 kPa. A sample of 100 blocks is produced and tested. Their mean compressive strength is 1356 kPa .Assume population standard deviation is 70 kPa (known).
+
+\(a\) **Reframe**/ **formulate**/ state the hypothesis.
+
+\(b\) **Compute** appropriate test statistic.
+
+\(c\) **Compute** P-value.
+
+\(d\) Critique/ Justify whether the blocks meet the specification.
+
+\
+**Problem 6.2:** A fabric manufacturer placed an order to a yarn manufacturer for a large batch of yarn that has strength of 20 cN/tex. He/she will ask for replacement if mean strength is less than 20cN/tex.
+
+Upon delivery, the fabric manufacturer found that the average strength of the yarn is 19.65 cN/tex with 1.2 standard deviation based on 40 tests.
+
+Carry out a statistical test at 0.05 level of confidence to justify whether the fabric manufacturer would ask the yarn manufacturer for replacement of yarn batch.\
+
+**Problem 6.3:** A process that manufactures steel bolts is supposed to be calibrated to produce bolts with a mean length of 5 cm. A sample of 100 bolts has a mean length of 5.02 cm with a standard deviation of 0.06 cm. Let $\mu$ be the mean length of bolts manufactured by this process .
+
+\(a\) **Evaluate/Estimate** the P-value for testing $H_0: \mu=5$ versus $H_1: \mu \ne 5$.
+
+\(b\) **Judge/Justify** whether the process is properly calibrated or not.
+
+**Problem 6.4:** A certain type of stainless steel powder is supposed to have a mean particle diameter of $\mu =15 \mu m$. A random sample of 87 particles had a mean diameter of $15.2 \mu m$, with a standard deviation of $1.8 \mu m$. A test is made of $H_0 : \mu = 15$ versus $H_1 : \mu \ne 15$.
+
+a\. **Find** the P-value.
+
+b\. Do you believe it is plausible that the mean diameter is $15 \mu m$, or are you convinced that it differs from $15 \mu m$? Explain your reasoning.\
+
+### One-sample t-test
+
+## Two-sample z-test
+
+## Two-sample t-test (Assuming equal variances)
+
+## Variance test: Single population
+
+## Variance test: Two populations
+
+## Test of Normality
+
+### Graphical Methods
+
+### Numerical methods
